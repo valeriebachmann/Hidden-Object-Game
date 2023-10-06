@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+img {
+    height: 100vh;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.score p {
+    padding: 30px 50px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+}
+
+#randomBox {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 600px;
+    left: 200px;
+    background-color: hotpink;
+}
+
+#popUpText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: aliceblue;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/*@media only screen and (max-width: 400) {
+
+   If [device width] is less than or equal to 400px, then do {…}
+    .score p {
+        padding: 30px 50px 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        width: 50px;
+        line-height: 10px;
+        position: absolute;
+        right: 0;
+    }
+}
