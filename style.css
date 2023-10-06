@@ -22,7 +22,7 @@ img {
     padding: 30px 50px 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
-    position: absolute;
+    position: fixed;
     right: 0;
 }
 
