@@ -1,18 +1,19 @@
-* {
+html,
+body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    background-color: #212121;
 }
 
-html {
+.horizontalSlider {
     height: 100%;
-}
-
-body {
-    height: 100%;
+    overflow-y: hidden;
+    position: relative;
 }
 
 img {
-    height: 100vh;
+    height: 100%;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
