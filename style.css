@@ -13,7 +13,7 @@ body {
 }
 
 img {
-    height: 100%;
+    /* height: 100%; */
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
@@ -23,17 +23,9 @@ img {
     padding: 30px 50px 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
+    color: azure;
     position: fixed;
     right: 0;
-}
-
-#randomBox {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 600px;
-    left: 200px;
-    background-color: hotpink;
 }
 
 #popUpText {
