@@ -28,14 +28,53 @@ img {
     right: 0;
 }
 
-#popUpText {
+#popUp {
+    display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    color: aliceblue;
-    font-size: 50px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    color: black;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    max-height: 50%;
+    overflow: auto;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#popUpHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#popUpCloseButton {
+    border: none;
+    background: none;
+    padding: 1.5rem;
+    margin: -1rem;
+}
+
+#popUpCloseButton svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+#popUpTitle {
+    margin: 0;
+    font-size: min(10vw, 3rem);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+#popUpText {
+    margin: 0;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
 
 /*@media only screen and (max-width: 400) {
 

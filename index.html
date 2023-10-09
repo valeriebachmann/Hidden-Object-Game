@@ -13,13 +13,27 @@
         <div class="score">
             <p>Score: </p>
         </div>
-        <img src="img/isometricRoomExample.jpeg" usemap="#image_map">
-        <map name="image_map">
-            <area alt="poster1" title="poster1" coords="122,183,188,275" shape="rect" onclick="showPopup()">
-            <area alt="poster2" title="poster2" coords="224,184,256,229" shape="rect" onclick="showPopup()">
-            <area alt="poster3" title="poster3" coords="495,103,542,142" shape="rect" onclick="showPopup()">
+        <img src="img/isometricRoomExample.jpeg" usemap="#imageMap">
+        <map name="imageMap">
+            <area alt="poster1" title="poster1" coords="122,183,188,275" shape="rect" onclick="showPopup('visual')">
+            <area alt="poster2" title="poster2" coords="224,184,256,229" shape="rect" onclick="showPopup('physical')">
+            <area alt="poster3" title="poster3" coords="495,103,542,142" shape="rect" onclick="showPopup('racism')">
         </map>
-        <h4 id="popUpText"></h4>
+    </div>
+    <div id="popUp" class="hidden">
+        <!-- <img id="popUpImage" /> -->
+        <div id="popUpHeader">
+            <h1 id="popUpTitle">Title</h1>
+            <button id="popUpCloseButton" type="button" onclick="hidePopup()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+        </div>
+        <p id="popUpText">Text</p>
     </div>
     <script src="script.js" defer></script>
     <script src="imageMapResizer.min.js"></script>
