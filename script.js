@@ -1,4 +1,12 @@
 const popUp = document.getElementById("popUp");
+let score = 0;
+let clicked = false;
+const clickedIds = [];
+
+function onObjectClick(popupId) {
+    showPopup(popupId);
+    incrementScore(popupId);
+}
 
 function showPopup(popupId) {
     const { title, text } = popUps[popupId]
@@ -9,6 +17,14 @@ function showPopup(popupId) {
 
 function hidePopup() {
     popUp.style.display = "none"
+}
+
+function incrementScore(popupId) {
+    if (!clickedIds.includes(popupId)) {
+        score += 1;
+        document.getElementById("scoreText").innerHTML = "Score: " + score;
+        clickedIds.push(popupId);
+    }
 }
 
 const popUps = {
