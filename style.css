@@ -1,5 +1,209 @@
+/* Fettschrift */
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('font/WOFF2/Atkinson-Hyperlegible-Bold-102a.woff2') format('woff2'),
+    url('font/WOFF/Atkinson-Hyperlegible-Bold-102.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Normale Schrift */
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('font/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2') format('woff2'),
+    url('font/WOFF/Atkinson-Hyperlegible-Regular-102.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Kursive Schrift */
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('font/WOFF2/Atkinson-Hyperlegible-Italic-102a.woff2') format('woff2'),
+    url('font/WOFF/Atkinson-Hyperlegible-Italic-102.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Fettschrift Kursiv */
+@font-face {
+    font-family: 'Atkinson Hyperlegible';
+    src: url('font/WOFF2/Atkinson-Hyperlegible-BoldItalic-102a.woff2') format('woff2'),
+    url('font/WOFF/Atkinson-Hyperlegible-BoldItalic-102.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+/* Grundlegende Schriftgrösse */
+body {
+    font-size: 16px;
+    font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5; /* Zeilenhöhe verbessert die Lesbarkeit */
+}
+
+/* Überschriften */
+h1 {
+    font-size: 2em; /* z.B. 32px bei einer Basisgrösse von 16px */
+}
+
+h2 {
+    font-size: 1.75em; /* z.B. 28px bei einer Basisgrösse von 16px */
+}
+
+h3 {
+    font-size: 1.5em; /* z.B. 24px bei einer Basisgrösse von 16px */
+}
+
+h4 {
+    font-size: 1.25em; /* z.B. 20px bei einer Basisgrösse von 16px */
+}
+
+h5 {
+    font-size: 1.125em; /* z.B. 18px bei einer Basisgrösse von 16px */
+}
+
+h6 {
+    font-size: 1em; /* Gleiche Grösse wie der Haupttext, aber oft fett oder anders stilisiert */
+}
+
+/* Weitere Textklassen */
+.small-text {
+    font-size: 0.875em; /* z.B. 14px bei einer Basisgrösse von 16px */
+}
+
+.large-text {
+    font-size: 1.125em; /* z.B. 18px bei einer Basisgrösse von 16px */
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #212121;
+}
+
+.horizontalSlider {
+    height: 100%;
+    overflow-y: hidden;
+    position: relative;
+}
+
+img {
+    height: 100%;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+#score p {
+    font-size: 1.5em;
+    color: rgb(34, 34, 34);
+    background-color: azure;
+    opacity: 85%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    position: fixed;
+    right: 20px;
+}
+
+#popUp {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    color: black;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    max-height: 50%;
+    overflow: auto;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#popUpHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#popUpCloseButton {
+    border: none;
+    background: none;
+    padding: 1.5rem;
+    margin: -1rem;
+}
+
+#popUpCloseButton svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+#popUpTitle {
+    margin: 0;
+    font-size: min(10vw, 3rem);
+    /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
+}
+
+#popUpText {
+    margin: 0;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+#buttonFooter {
+    display: flex;
+}
+
+#finishButton {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+}
+
+#finishButton a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: #1b336f;
+    border-radius: 10px;
+    font-size: min(10vw, 1.2rem);
+}
+
+#affectedButton,
+#notAffectedButton {
+    border: none;
+    padding: 15px 32px;
+    margin: 8px;
+    font-size: 1.25em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#affectedButton {
+    background-color: #008CBA;
+    color: white;
+}
+
+/* @media only screen and (max-width: 400) {
+
+   If [device width] is less than or equal to 400px, then do {…}
+    .score p {
+        padding: 30px 50px 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        width: 50px;
+        line-height: 10px;
+        position: absolute;
+        right: 0;
+    }
+}
 .textWrapper {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -24,7 +228,7 @@
 #startButton a {
     background-color: #008CBA;
     color: white;
-    font-size: 40px;
+    font-size: 2em;
     text-decoration: none;
     border-radius: 10px;
     padding: 15px 32px;
