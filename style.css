@@ -107,15 +107,36 @@ img {
     image-rendering: crisp-edges;
 }
 
-#score p {
+#scoreText {
     font-size: 1.5em;
     color: rgb(34, 34, 34);
     background-color: azure;
-    opacity: 85%;
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: 6px 10px;
+    border-radius: 0.25em;
     position: fixed;
     right: 20px;
+}
+
+.progressBar {
+    position: fixed;
+    margin: 20px;
+    background-color: azure;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+}
+
+.progressBarWithScore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0546e0;
+    box-shadow: 0 5px 5px -6px;
+    border-radius: 20px;
+    color: #fff;
+    height: 100%;
+    width: 0;
+    transition: 0.5s;
 }
 
 /*  Pop Up, wenn auf ein klickbares Objekt geklickt wird */
@@ -170,18 +191,18 @@ img {
     display: flex;
 }
 
-#finishButton {
+#backButton {
     position: fixed;
-    right: 20px;
+    left: 20px;
     bottom: 30px;
 }
 
-#finishButton a {
+#backButton a {
     color: #ffffff;
     text-decoration: none;
-    padding: 15px 20px;
-    background-color: #1b336f;
-    border-radius: 10px;
+    padding: 12px 28px;
+    background-color: #2e6deb;
+    border-radius: 0.25em;
     font-size: min(10vw, 1.2rem);
 }
 

@@ -14,16 +14,21 @@
         <div id="score">
             <p id="scoreText">Score: 0</p>
         </div>
-        <div id="finishButton">
-            <a href="#">Resultat</a>
+        <div id="backButton">
+            <a href="index.html">zurück</a>
+        </div>
+        <div class="progressBar">
+            <div class="progressBarWithScore"></div>
         </div>
         <img src="img/modelNotFinished2.png" usemap="#imageMap">
         <map name="imageMap">
             <!-- coords: Koordinaten für die klickbaren Objekte -->
-            <area alt="poster1" title="poster1" coords="122,183,188,275" shape="rect" onclick="onObjectClick('visual')">
-            <area alt="poster2" title="poster2" coords="224,184,256,229" shape="rect"
+            <area alt="standingDesk1" title="standingDesk1" coords="298,371 221,396 361,441 361,441 438,414"
+                shape="polygon" onclick="onObjectClick('visual')">
+            <area alt="whiteboard" title="whiteboard" coords="892,53 883,180 1123,225 1137,87" shape="polygon"
                 onclick="onObjectClick('physical')">
-            <area alt="poster3" title="poster3" coords="495,103,542,142" shape="rect" onclick="onObjectClick('racism')">
+            <area alt="door1" title="door1" coords="24,222 58,501 175,465 151,195" shape="polygon"
+                onclick="onObjectClick('racism')">
         </map>
     </div>
     <div id="popUp" class="hidden">
