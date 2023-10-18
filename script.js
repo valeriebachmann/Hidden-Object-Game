@@ -12,9 +12,11 @@ function onObjectClick(popupId) {
 
 //Füllt den PopUp mit Inhalt ab 
 function showPopup(popupId) {
-    const { title, text } = popUps[popupId]
+    const { title, text, textContent, textSource } = popUps[popupId]
     document.getElementById("popUpTitle").textContent = title;
-    document.getElementById("popUpText").textContent = text;
+    document.getElementById("popUpWusstestDu").textContent = text;
+    document.getElementById("popUpText").textContent = textContent;
+    document.getElementById("popUpSource").textContent = textSource;
     popUp.style.display = "grid";
 }
 
@@ -26,7 +28,7 @@ function hidePopup() {
 function incrementScore(popupId) {
     if (!clickedIds.includes(popupId)) {
         score += 1;
-        document.getElementById("scoreText").innerHTML = "Score: " + score + " / 10";
+        document.getElementById("scoreText").innerHTML = "Gefundene Objekte: " + score;
         clickedIds.push(popupId);
     }
 }
@@ -42,17 +44,23 @@ function incrementProgressBarWidth() {
 const popUps = {
     standingDesk: {
         imageUrl: "img/#.png",
-        title: "Stehpult",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet, ut aspernatur eius est distinctio fuga deleniti dolor quaerat voluptatum quidem? Eos, eligendi officiis explicabo temporibus esse hic voluptates corporis aperiam similique deleniti soluta eum tenetur quibusdam voluptate pariatur ea. Aspernatur optio quo pariatur nisi fugiat unde harum inventore. Repudiandae esse impedit quisquam dignissimos omnis, eligendi sed, neque aperiam, ullam iure consequuntur officia aliquid id. Laudantium, voluptatum! Dolorum facilis blanditiis quia eum, aperiam ut quasi repellat possimus reprehenderit sequi perferendis temporibus! Provident illum, odio, necessitatibus in incidunt nisi dignissimos suscipit beatae minima eius dolor tenetur veniam praesentium eos saepe enim ex quaerat libero porro laboriosam consequuntur iste, aspernatur cumque dolorem. Iste illum eveniet error similique pariatur ipsa dignissimos aspernatur ducimus commodi sint, reiciendis quisquam omnis aliquam rem expedita voluptate id autem!"
+        title: "Stehpult zu hoch",
+        text: "Wusstest du:",
+        textContent: "65% der Menschen mit einer Körperbehinderung haben Probleme, eine Aus- oder Weiterbildung zu machen.",
+        textSource: "Inklusionsindex 2023, Studie zur Inklusion von Menschen mit Behinderungen in der Schweiz. Pro Infirmis "
     },
     tuere: {
         imageUrl: "img/#.png",
-        title: "Türe",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet."
+        title: "Türe zu schwer",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet.",
+        textContent: "",
+        textSource: ""
     },
     whiteboard: {
         imageUrl: "img/#.png",
         title: "Whiteboard",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet, ut aspernatur eius est distinctio fuga deleniti dolor quaerat voluptatum quidem!"
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet, ut aspernatur eius est distinctio fuga deleniti dolor quaerat voluptatum quidem!",
+        textContent: "",
+        textSource: ""
     }
 }

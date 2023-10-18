@@ -150,7 +150,6 @@ img {
     color: black;
     border-radius: 1rem 1rem 0 0;
     padding: 1.5rem 2rem;
-    gap: 1.5rem;
     max-height: 50%;
     overflow: auto;
     max-width: 700px;
@@ -181,14 +180,8 @@ img {
     font-size: min(8vw, 3rem);
 }
 
-#popUpText {
+#popUpContent {
     margin: 0;
-    line-height: 1.5;
-    font-family: sans-serif;
-}
-
-#buttonFooter {
-    display: flex;
 }
 
 #backButton {
@@ -204,21 +197,6 @@ img {
     background-color: #2e6deb;
     border-radius: 0.25em;
     font-size: min(10vw, 1.2rem);
-}
-
-#affectedButton,
-#notAffectedButton {
-    border: none;
-    padding: 15px 32px;
-    margin: 8px;
-    font-size: 1.25em;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#affectedButton {
-    background-color: #008CBA;
-    color: white;
 }
 
 #startButton a {
