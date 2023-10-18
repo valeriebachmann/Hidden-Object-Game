@@ -118,28 +118,6 @@ img {
     right: 20px;
 }
 
-.progressBar {
-    position: fixed;
-    margin: 20px;
-    background-color: azure;
-    border-radius: 20px;
-    height: 30px;
-    width: 300px;
-}
-
-.progressBarWithScore {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0546e0;
-    box-shadow: 0 5px 5px -6px;
-    border-radius: 20px;
-    color: #fff;
-    height: 100%;
-    width: 0;
-    transition: 0.5s;
-}
-
 /*  Pop Up, wenn auf ein klickbares Objekt geklickt wird */
 #popUp {
     display: none;
@@ -202,7 +180,7 @@ img {
 
 
 /* index.html */
-.textWrapper {
+.contentWrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -225,8 +203,20 @@ img {
     width: 50px;
 }
 
+.buildingExample a {
+    background-color: #7b839f;
+    padding: 20px;
+    text-decoration: none;
+    top: 0px;
+}
+
 .buttonWrapper {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+}
+
+.buttonWrapper a {
+    text-decoration: none;
+    padding: 30px;
 }

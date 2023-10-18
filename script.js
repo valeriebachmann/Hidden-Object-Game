@@ -1,5 +1,4 @@
 const popUp = document.getElementById("popUp");
-const progress = document.querySelector(".progressBarWithScore");
 let score = 0;
 let clicked = false;
 const clickedIds = [];
@@ -7,7 +6,6 @@ const clickedIds = [];
 function onObjectClick(popupId) {
     showPopup(popupId);
     incrementScore(popupId);
-    incrementProgressBarWidth();
 }
 
 //Füllt den PopUp mit Inhalt ab 
@@ -31,12 +29,6 @@ function incrementScore(popupId) {
         document.getElementById("scoreText").innerHTML = "Gefundene Objekte: " + score;
         clickedIds.push(popupId);
     }
-}
-
-// 10: Beispiel max. 10 Objekte zu finden
-function incrementProgressBarWidth() {
-    progress.style.width = `${(score / 10) * 100}%`;
-    progress.innerText = `${Math.ceil((score / 10) * 100)}%`;
 }
 
 //Inhalt für die PopUps (Beispiele)
