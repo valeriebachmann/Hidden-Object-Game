@@ -11,14 +11,20 @@
 
 <body>
     <div class="horizontalSlider">
-        <div id="score">
-            <p id="scoreText">Gefundene Objekte: 0</p>
-        </div>
+        <span id="scoreText">Gefundene Objekte: 0</span>
         <div id="backButton">
             <a href="index.html">zurück</a>
         </div>
-        <div class="progressBar">
-            <div class="progressBarWithScore"></div>
+        <div id="popUpGameInformation">
+            <div>
+                <p>Deine Aufgabe: <br> Suche Objekte im Raum, welche nicht rollstuhlgerecht sind. <br> Mache einen
+                    Unterschied!</p>
+                <div id="popUpGameInformationButtons">
+                    <button id="acceptChallengeButton" type="button" onclick="hidePopup()">Herausforderung<br>
+                        starten</button>
+                    <button id="moreInfoButton" type="button" onclick="">Zuerst mehr <br>Infos</button>
+                </div>
+            </div>
         </div>
         <img src="img/panoramicPic.png" usemap="#imageMap">
         <map name="imageMap">

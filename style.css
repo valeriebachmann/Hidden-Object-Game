@@ -88,6 +88,10 @@ h6 {
     /* z.B. 18px bei einer Basisgrösse von 16px */
 }
 
+:root {
+    --spacing: 1.5rem;
+}
+
 html,
 body {
     height: 100%;
@@ -115,7 +119,29 @@ img {
     padding: 6px 10px;
     border-radius: 0.25em;
     position: fixed;
-    right: 20px;
+    top: var(--spacing);
+    right: var(--spacing);
+}
+
+/* Pop Up, wenn das Game gestartet wird */
+#popUpGameInformation {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+}
+
+#popUpGameInformation>div {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+#popUpGameInformationButtons {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*  Pop Up, wenn auf ein klickbares Objekt geklickt wird */
@@ -165,8 +191,8 @@ img {
 
 #backButton {
     position: fixed;
-    left: 20px;
-    bottom: 30px;
+    left: var(--spacing);
+    bottom: var(--spacing);
 }
 
 #backButton a {
@@ -189,19 +215,20 @@ img {
 }
 
 #popUpStartExplanation {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    margin: 30px;
     padding: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
 }
 
-#popUpStartExplanation button {
-    width: 50px;
-}
+#popUpStartExplanation button {}
 
 .buildingExample a {
     background-color: #7b839f;
@@ -214,6 +241,7 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
+    width: 100%;
 }
 
 .buttonWrapper a {

@@ -1,4 +1,5 @@
 const popUp = document.getElementById("popUp");
+const popUpGameInformation = document.getElementById("popUpGameInformation");
 let score = 0;
 let clicked = false;
 const clickedIds = [];
@@ -19,7 +20,8 @@ function showPopup(popupId) {
 }
 
 function hidePopup() {
-    popUp.style.display = "none"
+    popUp.style.display = "none";
+    popUpGameInformation.style.display = "none"
 }
 
 //Inkrementiert Score, wenn das Objekt noch nicht geklickt wurde
