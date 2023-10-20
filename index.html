@@ -20,8 +20,42 @@
             <a href="game.html">"Gebäude Rollstuhl-Zugänglichkeit"</a>
         </div>
         <div class="buttonWrapper">
-            <button type="button" onclick="">Über das Spiel</button>
+            <button type="button" onclick="showPopup()">Über das Spiel</button>
             <button type="button" onclick="">Einstellungen & Barrierefreiheit</button>
+        </div>
+    </div>
+    <div id="popUpAboutGame" class="hidden">
+        <div id="popUpAboutGameContent">
+            <div id="popUpHeader">
+                <h1>Über das Spiel</h1>
+                <button id="popUpCloseButton" type="button" onclick="hidePopup()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+            <p>Hey! Schön, dass du hier bist!</p>
+            <p>Dieses Spiel wurde als Teil eines Studienprojekts an der HSLU erstellt. Im Rahmen eines 5 wöchigen Moduls
+                zum Thema Diversity hatten wir die Aufgabe, ein interaktives Erlebnis zu schaffen, welches sowohl
+                unterhaltsam als auch informativ ist. </p>
+            <br>
+            <p>Unser Team:</p>
+            <p><b>Valerie Bachmann</b> - Programmierung</p>
+            <p><b>Sophit Oeschger</b> - Grafik & Illustration</p>
+            <p><b>Kevin Vettiger</b> - UX/UI Design, Texte</p>
+            <br>
+            <p>Wir danken der HSLU und unseren Dozent*innen Prof. Dr. Ladan Pooyan-Weihs und Stefan Fraefel für die
+                Unterstützung und das Feedback während des gesamten Projekts. Und natürlich danken wir Dir, dass Du
+                unser Spiel testest!</p>
+            <br>
+            <p><b>Hilf uns, uns zu verbessern:</b></p>
+            <button type="button">Feedback geben</button>
+            <p><b>Beratungsstellen und weitere Infos:</b></p>
+            <button type="button">Was ist Diversity?</button>
+            <button type="button">Beratungsstellen</button>
         </div>
     </div>
     <script src="scriptIndex.js" defer></script>

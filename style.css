@@ -232,8 +232,6 @@ img {
     border-radius: 10px;
 }
 
-#popUpStartExplanation button {}
-
 .buildingExample a {
     background-color: #7b839f;
     padding: 20px;
@@ -254,4 +252,28 @@ img {
     padding: 10px;
     margin-left: 15px;
     margin-top: 10px;
+}
+
+#popUpAboutGame {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 80%;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#popUpAboutGameContent {
+    padding: 40px;
+}
+
+#popUpAboutGameContent button {
+    padding: 10px;
+    margin: 10px;
 }
