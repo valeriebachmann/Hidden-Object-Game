@@ -21,7 +21,7 @@ function showPopup(popupId) {
     popUp.style.display = "grid";
 }
 
-function showPopup() {
+function showHelpPopup() {
     popUpHelp.style.display = "grid";
 }
 
