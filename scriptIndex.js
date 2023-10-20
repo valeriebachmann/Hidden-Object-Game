@@ -1,12 +1,12 @@
 const popUpStartExplanation = document.getElementById("popUpStartExplanation");
-const isAlreadyOnboarded = localStorage.getItem("isAlreadyOnboarded");
+const isAlreadyOnboardedInIndex = localStorage.getItem("isAlreadyOnboardedInIndex");
 
-if (isAlreadyOnboarded === "true") {
+if (isAlreadyOnboardedInIndex === "true") {
     popUpStartExplanation.style.display = "none";
 }
 
 function hidePopup() {
     popUpStartExplanation.style.display = "none";
-    localStorage.setItem("isAlreadyOnboarded", "true")
+    localStorage.setItem("isAlreadyOnboardedInIndex", "true")
 }
 

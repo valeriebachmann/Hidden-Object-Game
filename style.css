@@ -214,6 +214,10 @@ img {
     align-items: center;
 }
 
+.contentWrapper h1 {
+    color: #fff;
+}
+
 #popUpStartExplanation {
     position: fixed;
     display: flex;
@@ -239,12 +243,15 @@ img {
 
 .buttonWrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: flex-start;
     width: 100%;
 }
 
-.buttonWrapper a {
+.buttonWrapper button {
     text-decoration: none;
-    padding: 30px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 10px;
 }

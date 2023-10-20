@@ -1,5 +1,6 @@
 const popUp = document.getElementById("popUp");
 const popUpGameInformation = document.getElementById("popUpGameInformation");
+const isAlreadyOnboardedInGame = localStorage.getItem("isAlreadyOnboardedInGame");
 let score = 0;
 let clicked = false;
 const clickedIds = [];
@@ -19,9 +20,14 @@ function showPopup(popupId) {
     popUp.style.display = "grid";
 }
 
+if (isAlreadyOnboardedInGame === "true") {
+    popUpGameInformation.style.display = "none";
+}
+
 function hidePopup() {
     popUp.style.display = "none";
-    popUpGameInformation.style.display = "none"
+    popUpGameInformation.style.display = "none";
+    localStorage.setItem("isAlreadyOnboardedInGame", "true")
 }
 
 //Inkrementiert Score, wenn das Objekt noch nicht geklickt wurde
