@@ -12,6 +12,28 @@
 <body>
     <div class="horizontalSlider">
         <span id="scoreText">Gefundene Objekte: 0</span>
+        <div id="helpButton">
+            <button type="button" onclick="showPopup()">Hilfe</button>
+        </div>
+        <div id="popUpHelp" class="hidden">
+            <div id="popUpHelpContext">
+                <div id="popUpHeader">
+                    <h1>Hilfe</h1>
+                    <button id="popUpCloseButton" type="button" onclick="hidePopup()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-x">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <p>Hier folgt ein einfacher und verständlicher Leitfaden, wie das Spiel gespielt wird, einschliesslich
+                    der Steuerung, des Spielziels und etwaiger besonderer Regeln oder Mechanismen.
+                </p>
+                <img src="img/gifExample.gif">
+            </div>
+        </div>
         <div id="backButton">
             <a href="index.html">zurück</a>
         </div>
