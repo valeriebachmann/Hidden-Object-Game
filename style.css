@@ -244,6 +244,47 @@ img {
     font-size: min(10vw, 1.2rem);
 }
 
+#popUpEnd {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#popUpEndContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#getNextChallengeButton {
+    background-color: #2e6deb;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#getNextChallengeButton a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#getmoreInfoAboutAccessibilityButton a {
+    color: #414141;
+    margin: 10px;
+}
+
+#sendFeedbackButton a {
+    color: #414141;
+}
+
 
 /* -------------------------------------- index.html -------------------------------------- */
 .contentWrapper {

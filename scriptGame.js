@@ -2,13 +2,16 @@ const popUp = document.getElementById("popUp");
 const popUpGameInformation = document.getElementById("popUpGameInformation");
 const popUpHelp = document.getElementById("popUpHelp");
 const isAlreadyOnboardedInGame = localStorage.getItem("isAlreadyOnboardedInGame");
+const popUpEnd = document.getElementById("popUpEnd");
 let score = 0;
+let fullScore = 3; //temporär fixiert auf 3
 let clicked = false;
 const clickedIds = [];
 
 function onObjectClick(popupId) {
     showPopup(popupId);
     incrementScore(popupId);
+    getfullScorePopup(popupId);
 }
 
 //Füllt den PopUp mit Inhalt ab 
@@ -42,6 +45,12 @@ function incrementScore(popupId) {
         score += 1;
         document.getElementById("scoreText").innerHTML = "Gefundene Objekte: " + score;
         clickedIds.push(popupId);
+    }
+}
+
+function getfullScorePopup(popupId) {
+    if (score === fullScore) {
+        popUpEnd.style.display = "grid";
     }
 }
 
