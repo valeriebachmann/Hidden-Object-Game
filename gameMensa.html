@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="horizontalSlider">
+        <span id="scoreText">Gefundene Objekte: 0</span>
+        <div id="helpButton">
+            <button type="button" onclick="showHelpPopup()">Hilfe</button>
+        </div>
+        <div id="popUpHelp" class="hidden">
+            <div id="popUpHelpContext">
+                <div id="popUpHeader">
+                    <h1>Hilfe</h1>
+                    <button id="popUpCloseButton" type="button" onclick="hidePopup()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-x">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <p>Hier folgt ein einfacher und verständlicher Leitfaden, wie das Spiel gespielt wird, einschliesslich
+                    der Steuerung, des Spielziels und etwaiger besonderer Regeln oder Mechanismen.
+                </p>
+                <img src="img/gifExample.gif">
+                <div id="wrapperFeedback">
+                    <p><b>Hast du ein Fehler gefunden?</b></p>
+                    <button type="button">Feedback geben</button>
+                </div>
+                <button type="button">Einstellungen & Barrierefreiheit</button>
+            </div>
+        </div>
+        <div id="backButton">
+            <a href="game.html">zurück</a>
+        </div>
+        <div id="popUpGameInformation">
+            <div>
+                <p>Deine Aufgabe: <br> Suche Objekte im Raum, welche nicht rollstuhlgerecht sind. <br> Mache einen
+                    Unterschied!</p>
+                <div id="popUpGameInformationButtons">
+                    <button id="acceptChallengeButton" type="button" onclick="hidePopup()">Herausforderung<br>
+                        starten</button>
+                    <button id="moreInfoButton" type="button" onclick="">Zuerst mehr <br>Infos</button>
+                </div>
+            </div>
+        </div>
+        <img src="img/horizontalPicture2.png" usemap="#imageMap2">
+        <map name="imageMap2">
+            <!-- coords: Koordinaten für die klickbaren Objekte -->
+            <area alt="shelf" title="shelf" coords="2966,227,3261,750" shape="rect" onclick="onObjectClick('shelf')">
+        </map>
+    </div>
+    <div id="popUp" class="hidden">
+        <!-- <img id="popUpImage" /> -->
+        <div id="popUpHeader">
+            <h1 id="popUpTitle">Title</h1>
+            <button id="popUpCloseButton" type="button" onclick="hidePopup()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+        </div>
+        <hr style="width: 100%;">
+        <div id="popUpContent">
+            <p id="popUpWusstestDu">Wusstest du</p>
+            <h3 id="popUpText">Text</h3>
+            <p class="small-text" id="popUpSource">Source</p>
+        </div>
+    </div>
+    <div id="popUpEnd" class="hidden">
+        <div id="popUpEndContent">
+            <h1>Super!</h1>
+            <br>
+            <p>Du hast alle Probleme erkannt.</p>
+            <br>
+            <div id="getNextChallengeButton">
+                <a href="index.html">Zur nächsten Herausforderung</a>
+            </div>
+            <div id="getmoreInfoAboutAccessibilityButton">
+                <a href="index.html">Erfahre mehr über barrierefreie Räume</a>
+            </div>
+            <div id="sendFeedbackButton">
+                <a href="index.html">Feedback geben</a>
+            </div>
+        </div>
+    </div>
+    <script src="scriptGame.js" defer></script>
+    <script src="imageMapResizer.min.js"></script>
+    <script>
+        imageMapResize();
+    </script>
+</body>
+
+</html>

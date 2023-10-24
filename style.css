@@ -192,18 +192,19 @@ img {
 /* Hilfe Button im Game*/
 #helpButton {
     position: fixed;
-    left: var(--spacing);
-    top: var(--spacing);
+    right: var(--spacing);
+    bottom: var(--spacing);
 }
 
 #helpButton button {
+    line-height: 1;
     color: #fff;
     background-color: #4e4e4e;
     text-decoration: none;
     border: none;
     padding: 12px 28px;
     border-radius: 0.25em;
-    font-size: 1em;
+    font-size: min(10vw, 1.2rem);
 }
 
 #popUpHelp {
@@ -229,6 +230,15 @@ img {
     height: 200px;
 }
 
+#wrapperFeedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
 #backButton {
     position: fixed;
     left: var(--spacing);
@@ -236,10 +246,12 @@ img {
 }
 
 #backButton a {
+    line-height: 1;
+    display: block;
     color: #fff;
+    background-color: #2e6deb;
     text-decoration: none;
     padding: 12px 28px;
-    background-color: #2e6deb;
     border-radius: 0.25em;
     font-size: min(10vw, 1.2rem);
 }

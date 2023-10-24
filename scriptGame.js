@@ -54,9 +54,10 @@ function getfullScorePopup(popupId) {
     }
 }
 
-//Inhalt für die PopUps (Beispiele)
+//Inhalt für die PopUps 
 // 1. Bild  2. Titel  3. Text
 const popUps = {
+    //game.html
     standingDesk: {
         imageUrl: "img/#.png",
         title: "Stehpult zu hoch",
@@ -74,6 +75,14 @@ const popUps = {
     whiteboard: {
         imageUrl: "img/#.png",
         title: "Whiteboard",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet, ut aspernatur eius est distinctio fuga deleniti dolor quaerat voluptatum quidem!",
+        textContent: "",
+        textSource: ""
+    },
+    //gameMensa.html
+    shelf: {
+        imageUrl: "img/#.png",
+        title: "Shelf",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet, ut aspernatur eius est distinctio fuga deleniti dolor quaerat voluptatum quidem!",
         textContent: "",
         textSource: ""
