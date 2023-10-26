@@ -3,12 +3,13 @@ const popUpGameInformation = document.getElementById("popUpGameInformation");
 const popUpHelp = document.getElementById("popUpHelp");
 const popUpEnd = document.getElementById("popUpEnd");
 
+let fullScore = 4; //temporär fixiert auf 4
+let clicked = false;
+const clickedIds = JSON.parse(localStorage.getItem("clickedIds") || "[]");
+
 const isAlreadyOnboardedInGame = localStorage.getItem("isAlreadyOnboardedInGame");
 let score = Number(localStorage.getItem("score")) || 0; /* gespeicherter Score anzeigen, ausser es ist NULL, dann wird 0 angezeigt*/
 
-let fullScore = 4; //temporär fixiert auf 3
-let clicked = false;
-const clickedIds = [];
 
 // initially set score, otherwise score will be 0 (as defined in gameMensa.html) until a new object is found
 document.getElementById("scoreText").innerHTML = "Gefundene Objekte: " + score;
@@ -51,6 +52,7 @@ function incrementScore(popupId) {
         localStorage.setItem("score", score);
         document.getElementById("scoreText").innerHTML = "Gefundene Objekte: " + score;
         clickedIds.push(popupId);
+        localStorage.setItem("clickedIds", JSON.stringify(clickedIds));
     }
 }
 
