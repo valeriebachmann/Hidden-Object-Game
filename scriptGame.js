@@ -17,7 +17,6 @@ document.getElementById("scoreText").innerHTML = "Gefundene Objekte: " + score;
 function onObjectClick(popupId) {
     showPopup(popupId);
     incrementScore(popupId);
-    getfullScorePopup(popupId);
 }
 
 //Füllt den PopUp mit Inhalt ab 
@@ -39,6 +38,9 @@ if (isAlreadyOnboardedInGame === "true") {
 }
 
 function hidePopup() {
+    if (score >= fullScore) {
+        popUpEnd.style.display = "grid";
+    }
     popUp.style.display = "none";
     popUpGameInformation.style.display = "none";
     popUpHelp.style.display = "none";
@@ -53,12 +55,6 @@ function incrementScore(popupId) {
         document.getElementById("scoreText").innerHTML = "Gefundene Objekte: " + score;
         clickedIds.push(popupId);
         localStorage.setItem("clickedIds", JSON.stringify(clickedIds));
-    }
-}
-
-function getfullScorePopup(popupId) {
-    if (score === fullScore) {
-        popUpEnd.style.display = "grid";
     }
 }
 

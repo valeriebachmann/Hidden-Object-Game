@@ -299,16 +299,29 @@ img {
 
 
 /* -------------------------------------- index.html -------------------------------------- */
+.backgroundWrapper {
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
 .contentWrapper {
-    height: 100%;
+    height: calc(100% - 2 * var(--spacing));
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    isolation: isolate;
+    padding: var(--spacing);
 }
 
 .contentWrapper h1 {
     color: #fff;
+    display: flex;
+    justify-content: center;
 }
 
 #popUpStartExplanation {
@@ -325,26 +338,17 @@ img {
     border-radius: 10px;
 }
 
-.buildingExample a {
-    background-color: #7b839f;
-    padding: 20px;
-    text-decoration: none;
-    top: 0px;
-}
-
 .buttonWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 100%;
+    justify-content: end;
+    align-items: start;
+    gap: 10px
 }
 
 .buttonWrapper button {
     text-decoration: none;
     padding: 10px;
-    margin-left: 15px;
-    margin-top: 10px;
 }
 
 #popUpAboutGame {

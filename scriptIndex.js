@@ -15,4 +15,7 @@ function hidePopup() {
 function showPopup() {
     popUpAboutGame.style.display = "grid";
 }
+function test() {
+    console.log("test");
+}
 

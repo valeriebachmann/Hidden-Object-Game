@@ -16,13 +16,18 @@
     </div>
     <div class="contentWrapper">
         <h1>Diversity Land</h1>
-        <div class="buildingExample">
-            <a href="game.html">"Gebäude Rollstuhl-Zugänglichkeit"</a>
-        </div>
         <div class="buttonWrapper">
             <button type="button" onclick="showPopup()">Über das Spiel</button>
             <button type="button" onclick="">Diversity-Lexikon</button>
             <button type="button" onclick="">Einstellungen & Barrierefreiheit</button>
+        </div>
+        <div class="backgroundWrapper">
+            <img src="img/campus.png" usemap="#imageMap">
+            <map name="imageMap">
+                <!-- coords: Koordinaten für die klickbaren Objekte -->
+                <area alt="building1" title="building1" href="game.html"
+                    coords="1695,597 1525,684 1522,803 1682,873 1856,796 1849,671 " shape="polygon">
+            </map>
         </div>
     </div>
     <div id="popUpAboutGame" class="hidden">
@@ -60,6 +65,10 @@
         </div>
     </div>
     <script src="scriptIndex.js" defer></script>
+    <script src="imageMapResizer.min.js"></script>
+    <script>
+        imageMapResize();
+    </script>
 </body>
 
 </html>
