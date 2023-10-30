@@ -10,10 +10,6 @@
 </head>
 
 <body>
-    <div id="popUpStartExplanation">
-        <p>Tippe auf ein Gebäude, um zu starten</p>
-        <button type="button" onclick="hidePopup()">Verstanden</button>
-    </div>
     <div class="contentWrapper">
         <h1>Diversity Land</h1>
         <div class="buttonWrapper">
@@ -30,6 +26,10 @@
             </map>
         </div>
     </div>
+    <div id="popUpStartExplanation">
+        <p>Tippe auf ein Gebäude, um zu starten</p>
+        <button type="button" onclick="hidePopup()">Verstanden</button>
+    </div>
     <div id="popUpAboutGame" class="hidden">
         <div id="popUpAboutGameContent">
             <div id="popUpHeader">
@@ -43,25 +43,36 @@
                     </svg>
                 </button>
             </div>
-            <p>Hey! Schön, dass du hier bist!</p>
-            <p>Dieses Spiel wurde als Teil eines Studienprojekts an der HSLU erstellt. Im Rahmen eines 5 wöchigen Moduls
-                zum Thema Diversity hatten wir die Aufgabe, ein interaktives Erlebnis zu schaffen, welches sowohl
-                unterhaltsam als auch informativ ist. </p>
-            <br>
-            <p>Unser Team:</p>
-            <p><b>Valerie Bachmann</b> - Programmierung</p>
-            <p><b>Sophit Oeschger</b> - Grafik & Illustration</p>
-            <p><b>Kevin Vettiger</b> - UX/UI Design, Texte</p>
-            <br>
-            <p>Wir danken der HSLU und unseren Dozent*innen Prof. Dr. Ladan Pooyan-Weihs und Stefan Fraefel für die
-                Unterstützung und das Feedback während des gesamten Projekts. Und natürlich danken wir Dir, dass Du
-                unser Spiel testest!</p>
-            <br>
-            <p><b>Hilf uns, uns zu verbessern:</b></p>
-            <button type="button">Feedback geben</button>
+            <div id="popUpAboutGameContentText">
+                <p>Hey! Schön, dass du hier bist!</p>
+                <p>Dieses Spiel wurde als Teil eines Studienprojekts an der HSLU erstellt. Im Rahmen eines 5 wöchigen
+                    Moduls
+                    zum Thema Diversity hatten wir die Aufgabe, ein interaktives Erlebnis zu schaffen, welches sowohl
+                    unterhaltsam als auch informativ ist. </p>
+            </div>
+            <div id="popUpAboutGameContentText">
+                <p>Unser Team:</p>
+                <p><b>Valerie Bachmann</b> - Programmierung</p>
+                <p><b>Sophit Oeschger</b> - Grafik & Illustration</p>
+                <p><b>Kevin Vettiger</b> - UX/UI Design, Texte</p>
+            </div>
+            <div id="popUpAboutGameContentText">
+                <p>Wir danken der HSLU und unseren Dozent*innen Prof. Dr. Ladan Pooyan-Weihs und Stefan Fraefel für die
+                    Unterstützung und das Feedback während des gesamten Projekts. Und natürlich danken wir Dir, dass Du
+                    unser Spiel testest!</p>
+            </div>
+            <div id="popUpAboutGameContentText">
+                <p><b>Hilf uns, uns zu verbessern:</b></p>
+                <!-- <a href="mailto:info@example.com">Feedback geben</a> -->
+                <div class="buttonWrapper">
+                    <button type="button">Feedback geben</button>
+                </div>
+            </div>
             <p><b>Beratungsstellen und weitere Infos:</b></p>
-            <button type="button">Was ist Diversity?</button>
-            <button type="button">Beratungsstellen</button>
+            <div class="buttonWrapper">
+                <button type="button">Was ist Diversity?</button>
+                <button type="button">Beratungsstellen</button>
+            </div>
         </div>
     </div>
     <script src="scriptIndex.js" defer></script>

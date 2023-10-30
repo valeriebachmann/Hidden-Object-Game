@@ -288,11 +288,6 @@ img {
     color: #fff;
 }
 
-#getmoreInfoAboutAccessibilityButton a {
-    color: #414141;
-    margin: 10px;
-}
-
 #sendFeedbackButton a {
     color: #414141;
 }
@@ -347,30 +342,90 @@ img {
 }
 
 .buttonWrapper button {
-    text-decoration: none;
-    padding: 10px;
+    appearance: button;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.buttonWrapper button::after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.buttonWrapper button:main,
+.buttonWrapper button:focus {
+    user-select: auto;
+}
+
+.buttonWrapper button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+.buttonWrapper button:disabled {
+    cursor: auto;
+}
+
+.buttonWrapper button:active {
+    border-width: 4px 0 0;
+    background: none;
 }
 
 #popUpAboutGame {
     display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 100%;
-    max-width: 500px;
-    max-height: 80%;
-    overflow: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
     background-color: #fff;
-    border-radius: 10px;
+    color: black;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    overflow: auto;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 #popUpAboutGameContent {
-    padding: 40px;
+    padding: 20px;
 }
 
-#popUpAboutGameContent button {
-    padding: 10px;
-    margin: 10px;
+#popUpAboutGameContentText {
+    padding-bottom: 1rem;
 }
