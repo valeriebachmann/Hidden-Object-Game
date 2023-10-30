@@ -337,13 +337,13 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: start;
+    align-items: center;
     gap: 10px
 }
 
 .buttonWrapper button {
     appearance: button;
-    background-color: #1899D6;
+    background-color: #12709b;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
@@ -352,7 +352,7 @@ img {
     cursor: pointer;
     display: inline-block;
     font-family: din-round, sans-serif;
-    font-size: 15px;
+    font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: .8px;
     line-height: 20px;
@@ -369,12 +369,14 @@ img {
     -webkit-user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    width: 100%;
+    width: 350px;
+    /* max-width: 400px;
+    min-width: 400px; */
 }
 
 .buttonWrapper button::after {
     background-clip: padding-box;
-    background-color: #1CB0F6;
+    background-color: #1582b5;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
