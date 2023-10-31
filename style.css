@@ -115,9 +115,9 @@ img {
 #scoreText {
     font-size: 1em;
     color: rgb(34, 34, 34);
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
     padding: 6px 10px;
-    border-radius: 0.25em;
+    border-radius: 0.3em;
     position: fixed;
     top: var(--spacing);
     right: var(--spacing);
@@ -192,8 +192,8 @@ img {
 /* Hilfe Button im Game*/
 #helpButton {
     position: fixed;
-    right: var(--spacing);
-    bottom: var(--spacing);
+    left: var(--spacing);
+    top: var(--spacing);
 }
 
 #helpButton button {
@@ -239,13 +239,14 @@ img {
     margin-bottom: 45px;
 }
 
-#backButton {
+#mapButton {
+    display: flex;
     position: fixed;
     left: var(--spacing);
     bottom: var(--spacing);
 }
 
-#backButton a {
+/* #mapButton a {
     line-height: 1;
     display: block;
     color: #fff;
@@ -254,6 +255,70 @@ img {
     padding: 12px 28px;
     border-radius: 0.25em;
     font-size: min(10vw, 1.2rem);
+} */
+
+#mapButton button {
+    appearance: button;
+    background-color: #12709b;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+#mapButton button::after {
+    background-clip: padding-box;
+    background-color: #1582b5;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+#mapButton button:main,
+#mapButton button:focus {
+    user-select: auto;
+}
+
+#mapButton button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+#mapButton button:disabled {
+    cursor: auto;
+}
+
+#mapButton button:active {
+    border-width: 4px 0 0;
+    background: none;
 }
 
 #popUpEnd {
@@ -338,7 +403,7 @@ img {
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    gap: 10px
+    gap: 10px;
 }
 
 .buttonWrapper button {
@@ -352,7 +417,7 @@ img {
     cursor: pointer;
     display: inline-block;
     font-family: din-round, sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: .8px;
     line-height: 20px;
@@ -361,7 +426,6 @@ img {
     overflow: visible;
     padding: 13px 16px;
     text-align: center;
-    text-transform: uppercase;
     touch-action: manipulation;
     transform: translateZ(0);
     transition: filter .2s;
@@ -419,7 +483,8 @@ img {
     color: black;
     border-radius: 1rem;
     padding: 1.5rem 2rem;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     max-width: 100%;
     margin: 0 auto;
 }
