@@ -46,12 +46,13 @@
         </div>
         <div id="popUpGameInformation">
             <div>
-                <p>Deine Aufgabe: <br> Suche Objekte im Raum, welche nicht rollstuhlgerecht sind. <br> Mache einen
-                    Unterschied!</p>
-                <div id="popUpGameInformationButtons">
-                    <button id="acceptChallengeButton" type="button" onclick="hidePopup()">Herausforderung<br>
-                        starten</button>
-                    <button id="moreInfoButton" type="button" onclick="">Zuerst mehr <br>Infos</button>
+                <h2>Barrieren erkennen</h2>
+                <p>Suche 10 Dinge im Schulraum und in der Mensa, die nicht rollstuhlgerecht sind. <br> Lerne und mache
+                    einen Unterschied!
+                </p>
+                <div id="popUpButtons">
+                    <button id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
+                    <button id="startGameButton" type="button" onclick="hidePopup()">Spiel starten</button>
                 </div>
             </div>
         </div>
@@ -71,21 +72,16 @@
     <div id="popUp" class="hidden">
         <!-- <img id="popUpImage" /> -->
         <div id="popUpHeader">
-            <h1 id="popUpTitle">Title</h1>
-            <button id="popUpCloseButton" type="button" onclick="hidePopup()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-x">
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                </svg>
-            </button>
+            <h3 id="popUpTitle">Title</h3>
+
         </div>
-        <hr style="width: 100%;">
         <div id="popUpContent">
-            <p id="popUpWusstestDu">Wusstest du</p>
-            <h3 id="popUpText">Text</h3>
-            <p class="small-text" id="popUpSource">Source</p>
+            <p id="popUpText">Text</p>
+            <img id="popUpImg" src="img/iHateDoors.gif">
+            <div id="popUpButtons">
+                <button id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
+                <button id="startGameButton" type="button" onclick="hidePopup()">Weiter</button>
+            </div>
         </div>
     </div>
     <div id="popUpEnd" class="hidden">

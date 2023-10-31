@@ -105,19 +105,13 @@ body {
     position: relative;
 }
 
-img {
-    height: 100%;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-}
-
 #scoreText {
-    font-size: 1em;
+    font-size: 1rem;
+    font-family: din-round, sans-serif;
     color: rgb(34, 34, 34);
     background-color: rgb(255, 255, 255);
-    padding: 6px 10px;
-    border-radius: 0.3em;
+    padding: 13px 16px;
+    border-radius: 16px;
     position: fixed;
     top: var(--spacing);
     right: var(--spacing);
@@ -139,9 +133,88 @@ img {
     padding: 40px;
 }
 
-#popUpGameInformationButtons {
+#popUpButtons {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#moreInfoButton {
+    background-color: #12709b;
+}
+
+#startGameButton {
+    background-color: #ae511b;
+}
+
+#popUpButtons button {
+    appearance: button;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+}
+
+#moreInfoButton::after {
+    background-color: #1582b5;
+}
+
+#startGameButton::after {
+    background-color: #F27127;
+}
+
+#popUpButtons button::after {
+    background-clip: padding-box;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+#popUpButtons button:main,
+#popUpButtons button:focus {
+    user-select: auto;
+}
+
+#popUpButtons button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+#popUpButtons button:disabled {
+    cursor: auto;
+}
+
+#popUpButtons button:active {
+    border-width: 4px 0 0;
+    background: none;
 }
 
 /*  Pop Up, wenn auf ein klickbares Objekt geklickt wird */
@@ -155,7 +228,6 @@ img {
     color: black;
     border-radius: 1rem 1rem 0 0;
     padding: 1.5rem 2rem;
-    max-height: 50%;
     overflow: auto;
     max-width: 700px;
     margin: 0 auto;
@@ -165,6 +237,14 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+#popUpImg {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 15px 0px 30px 0px;
 }
 
 #popUpCloseButton {
@@ -182,7 +262,6 @@ img {
 
 #popUpTitle {
     margin: 0;
-    font-size: min(8vw, 3rem);
 }
 
 #popUpContent {
@@ -197,14 +276,67 @@ img {
 }
 
 #helpButton button {
-    line-height: 1;
-    color: #fff;
-    background-color: #4e4e4e;
-    text-decoration: none;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 0.25em;
-    font-size: min(10vw, 1.2rem);
+    appearance: button;
+    background-color: #12709b;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: din-round, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+#helpButton button::after {
+    background-clip: padding-box;
+    background-color: #1582b5;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+#helpButton button:main,
+#helpButton button:focus {
+    user-select: auto;
+}
+
+#helpButton button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+#helpButton button:disabled {
+    cursor: auto;
+}
+
+#helpButton button:active {
+    border-width: 4px 0 0;
+    background: none;
 }
 
 #popUpHelp {
@@ -240,7 +372,6 @@ img {
 }
 
 #mapButton {
-    display: flex;
     position: fixed;
     left: var(--spacing);
     bottom: var(--spacing);

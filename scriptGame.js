@@ -21,11 +21,10 @@ function onObjectClick(popupId) {
 
 //Füllt den PopUp mit Inhalt ab 
 function showPopup(popupId) {
-    const { title, text, textContent, textSource } = popUps[popupId]
+    const { title, textContent, imageUrl } = popUps[popupId]
     document.getElementById("popUpTitle").textContent = title;
-    document.getElementById("popUpWusstestDu").textContent = text;
     document.getElementById("popUpText").textContent = textContent;
-    document.getElementById("popUpSource").textContent = textSource;
+    document.getElementById("popUpImg").textContent = imageUrl;
     popUp.style.display = "grid";
 }
 
@@ -63,32 +62,24 @@ function incrementScore(popupId) {
 const popUps = {
     //game.html
     standingDesk: {
-        imageUrl: "img/#.png",
-        title: "Stehpult zu hoch",
-        text: "Wusstest du:",
-        textContent: "65% der Menschen mit einer Körperbehinderung haben Probleme, eine Aus- oder Weiterbildung zu machen.",
-        textSource: "Inklusionsindex 2023, Studie zur Inklusion von Menschen mit Behinderungen in der Schweiz. Pro Infirmis "
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/iHateDoors.gif"
     },
     tuere: {
-        imageUrl: "img/#.png",
         title: "Türe zu schwer",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet.",
         textContent: "",
-        textSource: ""
+        imageUrl: "img/#.png"
     },
     whiteboard: {
-        imageUrl: "img/#.png",
         title: "Whiteboard",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet, ut aspernatur eius est distinctio fuga deleniti dolor quaerat voluptatum quidem!",
         textContent: "",
-        textSource: ""
+        imageUrl: "img/#.png"
     },
     //gameMensa.html
     shelf: {
-        imageUrl: "img/#.png",
         title: "Shelf",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae incidunt fuga iste, error nemo libero accusamus ratione sapiente nisi quisquam! Esse excepturi, officiis amet, ut aspernatur eius est distinctio fuga deleniti dolor quaerat voluptatum quidem!",
         textContent: "",
-        textSource: ""
+        imageUrl: "img/#.png"
     }
 }
