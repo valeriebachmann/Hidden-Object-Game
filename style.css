@@ -1,48 +1,8 @@
-/* Fettschrift */
-@font-face {
-    font-family: 'Atkinson Hyperlegible';
-    src: url('font/WOFF2/Atkinson-Hyperlegible-Bold-102a.woff2') format('woff2'),
-        url('font/WOFF/Atkinson-Hyperlegible-Bold-102.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-/* Normale Schrift */
-@font-face {
-    font-family: 'Atkinson Hyperlegible';
-    src: url('font/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2') format('woff2'),
-        url('font/WOFF/Atkinson-Hyperlegible-Regular-102.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Kursive Schrift */
-@font-face {
-    font-family: 'Atkinson Hyperlegible';
-    src: url('font/WOFF2/Atkinson-Hyperlegible-Italic-102a.woff2') format('woff2'),
-        url('font/WOFF/Atkinson-Hyperlegible-Italic-102.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-/* Fettschrift Kursiv */
-@font-face {
-    font-family: 'Atkinson Hyperlegible';
-    src: url('font/WOFF2/Atkinson-Hyperlegible-BoldItalic-102a.woff2') format('woff2'),
-        url('font/WOFF/Atkinson-Hyperlegible-BoldItalic-102.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-body {
-    font-family: 'Atkinson Hyperlegible', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 
 /* Grundlegende Schriftgrösse */
 body {
-    font-size: 16px;
-    font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    line-height: 1.5;
+    font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* Zeilenhöhe verbessert die Lesbarkeit */
 }
 
@@ -77,6 +37,10 @@ h6 {
     /* Gleiche Grösse wie der Haupttext, aber oft fett oder anders stilisiert */
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Weitere Textklassen */
 .small-text {
     font-size: 0.875em;
@@ -90,6 +54,8 @@ h6 {
 
 :root {
     --spacing: 1.5rem;
+    --popup-width: calc(100% - 2 * var(--spacing));
+    --popup-max-width: 450px;
 }
 
 html,
@@ -99,6 +65,10 @@ body {
 }
 
 /* -------------------------------------- game.html -------------------------------------- */
+#backgroundImg {
+    height: 100%;
+}
+
 .horizontalSlider {
     height: 100%;
     overflow-y: hidden;
@@ -106,11 +76,9 @@ body {
 }
 
 #scoreText {
-    font-size: 1rem;
-    font-family: din-round, sans-serif;
     color: rgb(34, 34, 34);
     background-color: rgb(255, 255, 255);
-    padding: 13px 16px;
+    padding: 15px 16px;
     border-radius: 16px;
     position: fixed;
     top: var(--spacing);
@@ -123,20 +91,14 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 500px;
+    width: var(--popup-width);
+    max-width: var(--popup-max-width);
 }
 
 #popUpGameInformation>div {
     background-color: #fff;
     border-radius: 10px;
     padding: 40px;
-}
-
-#popUpButtons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 #moreInfoButton {
@@ -147,35 +109,6 @@ body {
     background-color: #ae511b;
 }
 
-#popUpButtons button {
-    appearance: button;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    box-sizing: border-box;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: din-round, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .8px;
-    line-height: 20px;
-    margin: 0;
-    outline: none;
-    overflow: visible;
-    padding: 13px 16px;
-    text-align: center;
-    touch-action: manipulation;
-    transform: translateZ(0);
-    transition: filter .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: auto;
-}
-
 #moreInfoButton::after {
     background-color: #1582b5;
 }
@@ -184,38 +117,9 @@ body {
     background-color: #F27127;
 }
 
-#popUpButtons button::after {
-    background-clip: padding-box;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    bottom: -4px;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
 
-#popUpButtons button:main,
-#popUpButtons button:focus {
-    user-select: auto;
-}
 
-#popUpButtons button:hover:not(:disabled) {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-}
 
-#popUpButtons button:disabled {
-    cursor: auto;
-}
-
-#popUpButtons button:active {
-    border-width: 4px 0 0;
-    background: none;
-}
 
 /*  Pop Up, wenn auf ein klickbares Objekt geklickt wird */
 #popUp {
@@ -275,100 +179,24 @@ body {
     top: var(--spacing);
 }
 
-#helpButton button {
-    appearance: button;
-    background-color: #12709b;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    box-sizing: border-box;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: din-round, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .8px;
-    line-height: 20px;
-    margin: 0;
-    outline: none;
-    overflow: visible;
-    padding: 13px 16px;
-    text-align: center;
-    touch-action: manipulation;
-    transform: translateZ(0);
-    transition: filter .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-#helpButton button::after {
-    background-clip: padding-box;
-    background-color: #1582b5;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    bottom: -4px;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-
-#helpButton button:main,
-#helpButton button:focus {
-    user-select: auto;
-}
-
-#helpButton button:hover:not(:disabled) {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-}
-
-#helpButton button:disabled {
-    cursor: auto;
-}
-
-#helpButton button:active {
-    border-width: 4px 0 0;
-    background: none;
-}
-
 #popUpHelp {
     display: none;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 100%;
     height: 100%;
-    max-width: 500px;
-    max-height: 80%;
+    max-width: var(--popup-max-width);
     overflow: auto;
     background-color: #fff;
     border-radius: 10px;
+    padding: 30px;
+    z-index: 1;
 }
 
-#popUpHelpContext {
-    padding: 40px;
-}
-
-#popUpHelpContext img {
+#popUpHelp img {
     height: 200px;
-}
-
-#wrapperFeedback {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 20px;
-    margin-bottom: 45px;
 }
 
 #mapButton {
@@ -377,85 +205,24 @@ body {
     bottom: var(--spacing);
 }
 
-/* #mapButton a {
-    line-height: 1;
-    display: block;
-    color: #fff;
-    background-color: #2e6deb;
-    text-decoration: none;
-    padding: 12px 28px;
-    border-radius: 0.25em;
-    font-size: min(10vw, 1.2rem);
-} */
-
-#mapButton button {
-    appearance: button;
-    background-color: #12709b;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: din-round, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .8px;
-    line-height: 20px;
-    margin: 0;
-    outline: none;
-    overflow: visible;
-    padding: 13px 16px;
-    text-align: center;
-    touch-action: manipulation;
-    transform: translateZ(0);
-    transition: filter .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: fit-content;
-}
-
-#mapButton button::after {
-    background-clip: padding-box;
-    background-color: #1582b5;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    bottom: -4px;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-
-#mapButton button:main,
-#mapButton button:focus {
-    user-select: auto;
-}
-
-#mapButton button:hover:not(:disabled) {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-}
-
-#mapButton button:disabled {
-    cursor: auto;
-}
-
-#mapButton button:active {
-    border-width: 4px 0 0;
-    background: none;
+#popUpFalseClick {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--popup-width);
+    max-width: var(--popup-max-width);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
 }
 
 #popUpEnd {
     display: none;
     flex-direction: column;
-    justify-content: center;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -463,30 +230,20 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
+    gap: 10px;
+    width: var(--popup-width);
+    max-width: var(--popup-max-width);
 }
 
-#popUpEndContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#getNextChallenge {
+    background-color: #ae511b;
 }
 
-#getNextChallengeButton {
-    background-color: #2e6deb;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
+#getNextChallenge::after {
+    background-color: #F27127;
 }
 
-#getNextChallengeButton a {
-    text-decoration: none;
-    color: #fff;
-}
-
-#sendFeedbackButton a {
-    color: #414141;
-}
 
 
 /* -------------------------------------- index.html -------------------------------------- */
@@ -500,7 +257,7 @@ body {
 }
 
 .contentWrapper {
-    height: calc(100% - 2 * var(--spacing));
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -527,6 +284,8 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+    width: var(--popup-width);
+    max-width: var(--popup-max-width);
 }
 
 .buttonWrapper {
@@ -538,69 +297,7 @@ body {
 }
 
 .buttonWrapper button {
-    appearance: button;
-    background-color: #12709b;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: din-round, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .8px;
-    line-height: 20px;
-    margin: 0;
-    outline: none;
-    overflow: visible;
-    padding: 13px 16px;
-    text-align: center;
-    touch-action: manipulation;
-    transform: translateZ(0);
-    transition: filter .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: 350px;
-    /* max-width: 400px;
-    min-width: 400px; */
-}
-
-.buttonWrapper button::after {
-    background-clip: padding-box;
-    background-color: #1582b5;
-    border: solid transparent;
-    border-radius: 16px;
-    border-width: 0 0 4px;
-    bottom: -4px;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-
-.buttonWrapper button:main,
-.buttonWrapper button:focus {
-    user-select: auto;
-}
-
-.buttonWrapper button:hover:not(:disabled) {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-}
-
-.buttonWrapper button:disabled {
-    cursor: auto;
-}
-
-.buttonWrapper button:active {
-    border-width: 4px 0 0;
-    background: none;
+    width: 100%;
 }
 
 #popUpAboutGame {
@@ -616,8 +313,8 @@ body {
     padding: 1.5rem 2rem;
     overflow-y: auto;
     overflow-x: hidden;
-    max-width: 100%;
     margin: 0 auto;
+    width: 100%;
 }
 
 #popUpAboutGameContent {
@@ -626,4 +323,58 @@ body {
 
 #popUpAboutGameContentText {
     padding-bottom: 1rem;
+}
+
+
+.duolingo-button {
+    appearance: button;
+    background-color: #12709b;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    /* white-space: nowrap; */
+}
+
+.duolingo-button::after {
+    background-clip: padding-box;
+    background-color: #1582b5;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.duolingo-button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+.duolingo-button:disabled {
+    cursor: auto;
+}
+
+.duolingo-button:active {
+    border-width: 4px 0 0;
+    background: none;
 }

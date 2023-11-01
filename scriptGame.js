@@ -2,8 +2,9 @@ const popUp = document.getElementById("popUp");
 const popUpGameInformation = document.getElementById("popUpGameInformation");
 const popUpHelp = document.getElementById("popUpHelp");
 const popUpEnd = document.getElementById("popUpEnd");
+const popUpFalseClick = document.getElementById("popUpFalseClick");
 
-let fullScore = 4; //temporär fixiert auf 4
+let fullScore = 2; //temporär fixiert auf 4
 let clicked = false;
 const clickedIds = JSON.parse(localStorage.getItem("clickedIds") || "[]");
 
@@ -28,6 +29,10 @@ function showPopup(popupId) {
     popUp.style.display = "grid";
 }
 
+function showTryAgainPopUp() {
+    popUpFalseClick.style.display = "flex";
+}
+
 function showHelpPopup() {
     popUpHelp.style.display = "grid";
 }
@@ -38,11 +43,12 @@ if (isAlreadyOnboardedInGame === "true") {
 
 function hidePopup() {
     if (score >= fullScore) {
-        popUpEnd.style.display = "grid";
+        popUpEnd.style.display = "flex";
     }
     popUp.style.display = "none";
     popUpGameInformation.style.display = "none";
     popUpHelp.style.display = "none";
+    popUpFalseClick.style.display = "none";
     localStorage.setItem("isAlreadyOnboardedInGame", "true")
 }
 
@@ -78,8 +84,8 @@ const popUps = {
     },
     //gameMensa.html
     shelf: {
-        title: "Shelf",
-        textContent: "",
-        imageUrl: "img/#.png"
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/iHateDoors.gif"
     }
 }

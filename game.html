@@ -12,51 +12,45 @@
 <body>
     <div class="horizontalSlider">
         <span id="scoreText">Gefundene Objekte: 0</span>
-        <div id="helpButton">
-            <button type="button" onclick="showHelpPopup()">Hilfe</button>
-        </div>
-        <div id="popUpHelp" class="hidden">
-            <div id="popUpHelpContext">
-                <div id="popUpHeader">
-                    <h1>Hilfe</h1>
-                    <button id="popUpCloseButton" type="button" onclick="hidePopup()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-x">
-                            <path d="M18 6 6 18" />
-                            <path d="m6 6 12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <p>Hier folgt ein einfacher und verständlicher Leitfaden, wie das Spiel gespielt wird, einschliesslich
-                    der Steuerung, des Spielziels und etwaiger besonderer Regeln oder Mechanismen.
-                </p>
-                <img src="img/gifExample.gif">
-                <div id="wrapperFeedback">
-                    <p><b>Hast du ein Fehler gefunden?</b></p>
-                    <button type="button">Feedback geben</button>
-                </div>
-                <button type="button">Einstellungen & Barrierefreiheit</button>
+        <button id="helpButton" class="duolingo-button" type="button" onclick="showHelpPopup()">Hilfe</button>
+        <div id="popUpHelp">
+            <div id="popUpHeader">
+                <h1>Hilfe</h1>
+                <button id="popUpCloseButton" type="button" onclick="hidePopup()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+            <p>Hier folgt ein einfacher und verständlicher Leitfaden, wie das Spiel gespielt wird, einschliesslich
+                der Steuerung, des Spielziels und etwaiger besonderer Regeln oder Mechanismen.
+            </p>
+            <img src="img/gifExample.gif">
+            <div class="buttonWrapper" style="margin-top: 50px;">
+                <button class="duolingo-button" type="button">Feedback geben</button>
+                <button class="duolingo-button" type="button">Einstellungen & Barrierefreiheit</button>
             </div>
         </div>
-        <div id="mapButton">
-            <a href="index.html">
-                <button type="button">zur Karte</button>
-            </a>
-        </div>
+        <a id="mapButton" class="duolingo-button" href="index.html">
+            zur Karte
+        </a>
         <div id="popUpGameInformation">
             <div>
                 <h2>Barrieren erkennen</h2>
                 <p>Suche 10 Dinge im Schulraum und in der Mensa, die nicht rollstuhlgerecht sind. <br> Lerne und mache
                     einen Unterschied!
                 </p>
-                <div id="popUpButtons">
-                    <button id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
-                    <button id="startGameButton" type="button" onclick="hidePopup()">Spiel starten</button>
+                <div class="buttonWrapper">
+                    <button class="duolingo-button" id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
+                    <button class="duolingo-button" id="startGameButton" type="button" onclick="hidePopup()">Spiel
+                        starten</button>
                 </div>
             </div>
         </div>
-        <img src="img/horizontalPicture3.png" usemap="#imageMap">
+        <img id="backgroundImg" src="img/horizontalPicture3.png" usemap="#imageMap" onclick="showTryAgainPopUp()">
         <map name="imageMap">
             <!-- coords: Koordinaten für die klickbaren Objekte -->
             <area alt="standingDesk1" title="standingDesk1"
@@ -78,25 +72,33 @@
         <div id="popUpContent">
             <p id="popUpText">Text</p>
             <img id="popUpImg" src="img/iHateDoors.gif">
-            <div id="popUpButtons">
-                <button id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
-                <button id="startGameButton" type="button" onclick="hidePopup()">Weiter</button>
+            <div class="buttonWrapper">
+                <button class="duolingo-button" id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
+                <button class="duolingo-button" id="startGameButton" type="button" onclick="hidePopup()">Weiter</button>
             </div>
         </div>
     </div>
-    <div id="popUpEnd" class="hidden">
-        <div id="popUpEndContent">
-            <h1>Super!</h1>
+    <div id="popUpFalseClick">
+        <div id="popUpFalseClickContent">
+            <h1>Guter Versuch!</h1>
             <br>
-            <p>Du hast alle Probleme erkannt.</p>
+            <p>Suche nochmals oder lese durch die Hinweise</p>
             <br>
-            <div id="getNextChallengeButton">
-                <a href="index.html">Zur nächsten Herausforderung</a>
-            </div>
-            <div id="sendFeedbackButton">
-                <a href="mailto:info@example.com">Feedback geben</a>
+            <div class="buttonWrapper">
+                <button class="duolingo-button" id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
+                <button class="duolingo-button" id="startGameButton" type="button" onclick="hidePopup()">Weiter</button>
             </div>
         </div>
+    </div>
+    <div id="popUpEnd">
+        <h1>Super! Rollt bei dir</h1>
+        <p>Du hast alle 10 gefunden!</p>
+        <a id="sendFeedbackButton" class="duolingo-button" href="mailto:info@example.com">
+            Feedback geben
+        </a>
+        <a id="getNextChallenge" class="duolingo-button" href="index.html">
+            nächste Herausforderung
+        </a>
     </div>
     <script src="scriptGame.js" defer></script>
     <script src="imageMapResizer.min.js"></script>
