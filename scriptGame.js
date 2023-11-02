@@ -25,7 +25,7 @@ function showPopup(popupId) {
     const { title, textContent, imageUrl } = popUps[popupId]
     document.getElementById("popUpTitle").textContent = title;
     document.getElementById("popUpText").textContent = textContent;
-    document.getElementById("popUpImg").textContent = imageUrl;
+    document.getElementById("popUpImg").setAttribute("src", imageUrl);
     popUp.style.display = "grid";
 }
 
@@ -70,87 +70,127 @@ const popUps = {
     tuere: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/iHateDoors.gif"
     },
     stehpult: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/shelf2.gif"
     },
     barhocker: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/shelf5.gif"
     },
     vorhang: {
         title: "Genau! Das ist Ableismus",
         textContent: "",
-        imageUrl: "img/#.png"
+        imageUrl: "img/gif/curtain.gif"
     },
     regal1: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/shelf4.gif"
     },
     fernseher: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/comingtoyou.gif"
     },
     schiebregal: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/heavy.gif"
     },
     steckdose: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/lowPowerOutlet.gif"
     },
     lichtschalter: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
-    },
-    whiteboardstifte: {
-        title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
-    },
-    whiteboardwischer: {
-        title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
-    },
-    whiteboard: {
-        title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
-    },
-    tische: {
-        title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/shelf6.gif"
     },
     regal2: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/reachit.gif"
     },
-    treppe: {
+    whiteboardstifte: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/almostthere.gif"
+    },
+    whiteboardwischer: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/soclose.gif"
+    },
+    whiteboard: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/jump.gif"
+    },
+    tische1: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/babydesk.gif"
+    },
+    regal3: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/nottall.gif"
+    },
+    treppe1: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/stairfire.gif"
     },
     rednerpult: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
+        imageUrl: "img/gif/microphone.gif"
     },
     //gameMensa.html
-    shelf: {
+    tischeundstuehle: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
-        imageUrl: "img/iHateDoors.gif"
-    }
+        imageUrl: "img/gif/iHateDoors.gif"
+    },
+    regal4: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/iHateDoors.gif"
+    },
+    essen: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/iHateDoors.gif"
+    },
+    regal5: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/iHateDoors.gif"
+    },
+    treppe2: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/iHateDoors.gif"
+    },
+    wc: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/iHateDoors.gif"
+    },
+    regal6: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/iHateDoors.gif"
+    },
+    notausgang: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/gif/iHateDoors.gif"
+    },
 }
