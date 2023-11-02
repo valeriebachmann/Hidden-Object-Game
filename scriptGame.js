@@ -67,20 +67,30 @@ function incrementScore(popupId) {
 // 1. Bild  2. Titel  3. Text
 const popUps = {
     //game.html
-    standingDesk: {
+    tuere: {
         title: "Genau! Das ist Ableismus",
         textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
         imageUrl: "img/iHateDoors.gif"
     },
-    tuere: {
-        title: "Türe zu schwer",
+    stehpult: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/iHateDoors.gif"
+    },
+    barhocker: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/iHateDoors.gif"
+    },
+    vorhang: {
+        title: "Genau! Das ist Ableismus",
         textContent: "",
         imageUrl: "img/#.png"
     },
-    whiteboard: {
-        title: "Whiteboard",
-        textContent: "",
-        imageUrl: "img/#.png"
+    regal: {
+        title: "Genau! Das ist Ableismus",
+        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        imageUrl: "img/iHateDoors.gif"
     },
     //gameMensa.html
     shelf: {
