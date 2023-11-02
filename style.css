@@ -272,6 +272,22 @@ body {
     justify-content: center;
 }
 
+#indexButton {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.indexAboutGameButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    max-width: 450px;
+    width: 100%;
+}
+
 #popUpStartExplanation {
     position: fixed;
     display: flex;
