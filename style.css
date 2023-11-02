@@ -282,7 +282,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: center;
     gap: 10px;
     max-width: 450px;
     width: 100%;
