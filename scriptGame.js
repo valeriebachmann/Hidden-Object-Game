@@ -74,123 +74,123 @@ const popUps = {
     },
     stehpult: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Das Stehpult ist zu hoch. Nicht alle können sich beteiligen",
+        textContent: "Ganz richtig! Nicht verstellbare Stehpulte stellen eine Hürde für Personen mit geringer Körpergrösse oder Rollstuhl-Nutzende dar.",
         imageUrl: "img/gif/shelf2.gif"
     },
     barhocker: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Die Stühle sind zu hoch. Nicht alle können sich beteiligen.",
+        textContent: "Ganz richtig! Zu hohe Barhocker stellen eine Hürde für Personen mit geringer Körpergrösse oder Rollstuhl-Nutzende dar.",
         imageUrl: "img/gif/cantsitwithus.gif"
     },
     vorhang: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Diese Vorhänge sind mühsam zu schieben.",
+        textContent: "Gut erkannt! Mühsam zu schliessende Vorhänge stellen eine Barriere dar und erschweren oder verunmöglichen die Bedienung für Personen mit eingeschränkter Handfunktion.",
         imageUrl: "img/gif/curtain.gif"
     },
     regal1: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Hohe Regale sind nicht für alle Menschen erreichbar.",
+        textContent: "Genau richtig! Zu hohe Regale können das Erreichen von Gegenständen für Rollstuhl-Nutzende erschweren oder verunmöglichen.",
         imageUrl: "img/gif/shelf4.gif"
     },
     fernseher: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Der Fernseher ist zu schwer zu schieben und zu hoch zu platziert.",
+        textContent: "Absolut! Zu hoch platzierte oder schwer bewegliche TVs können die Bedienung und Sicht für Rollstuhl-Nutzende erschweren oder verunmöglichen.",
         imageUrl: "img/gif/comingtoyou.gif"
     },
     schiebregal: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schwere Schiebregale benötigen viel ",
+        textContent: "Gut erkannt! Schwere Schiebregale benötigen viel Kraft zum Schieben und zu hohe Regale können das Erreichen von Gegenständen für Rollstuhl-Nutzende erschweren oder verunmöglichen.",
         imageUrl: "img/gif/heavy.gif"
     },
     steckdose: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Genau! Zu tief positionierte Steckdosen sind mühsam zu erreichen.",
         imageUrl: "img/gif/lowPowerOutlet.gif"
     },
     lichtschalter: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Richtig erkannt! Zu hoch platzierte Schalter sind eine Barriere für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/shelf6.gif"
     },
     regal2: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Genau richtig! Zu hohe Regale können das Erreichen von Gegenständen für Rollstuhl-Nutzende erschweren oder verunmöglichen.",
         imageUrl: "img/gif/reachit.gif"
     },
     whiteboardstifte: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Gut beobachtet! Zu hoch platzierte Whiteboard-Stifte erschweren oder verunmöglichen die Nutzung für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/almostthere.gif"
     },
     whiteboardwischer: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Gut beobachtet! Zu hoch platzierte Whiteboard-Wischer erschweren oder verunmöglichen die Nutzung für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/soclose.gif"
     },
     whiteboard: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Gut beobachtet! Zu hoch platzierte Whiteboards erschweren oder verunmöglichen die Nutzung für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/jump.gif"
     },
     tische1: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Genau! Nicht verstellbare Stehpulte stellen eine Hürde für Personen mit geringer Körpergrösse oder Rollstuhl-Nutzende dar.",
         imageUrl: "img/gif/babydesk.gif"
     },
     regal3: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Genau richtig! Zu hohe Regale können das Erreichen von Gegenständen für Rollstuhl-Nutzende erschweren oder verunmöglichen.",
         imageUrl: "img/gif/nottall.gif"
     },
     treppe1: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Absolut richtig! Nicht zugängliche Treppen stellen eine erhebliche Barriere für Rollstuhl-Nutzende dar.",
         imageUrl: "img/gif/stair.gif"
     },
     rednerpult: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Ganz genau! Nicht verstellbare Rednerpulte können die Nutzung für Rollstuhl-Nutzende oder Personen mit geringer Körpergrösse erschweren oder verunmöglichen.",
         imageUrl: "img/gif/microphone.gif"
     },
     whiteboard2: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "ut beobachtet! Zu hoch platzierte Whiteboards erschweren oder verunmöglichen die Nutzung für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/microphone.gif"
     },
     //gameMensa.html
     tischeundstuehle: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Gut beobachtet! Zu dicht aneinander stehende Tische und Stühle erschweren oder verunmöglichen die Bewegungsfreiheit für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/traffic.gif"
     },
     regal4: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Genau richtig! Zu hohe Regale können das Erreichen von Gegenständen für Rollstuhl-Nutzende erschweren oder verunmöglichen.",
         imageUrl: "img/gif/cantreach.gif"
     },
     essen: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Absolut! Zu hoch platzierte Essen auf einem Buffet erschweren oder verunmöglichen den Zugang für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/essen.gif"
     },
     regal5: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Genau richtig! Zu hohe Regale können das Erreichen von Gegenständen für Rollstuhl-Nutzende erschweren oder verunmöglichen.",
         imageUrl: "img/gif/shelf3.gif"
     },
     treppe2: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Genau richtig! Das Fehlen eines Lifts oder nicht zugängliche Treppen erschweren oder verunmöglichen den Zugang zu verschiedenen Etagen für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/dogstair.gif"
     },
     wc: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Richtig erkannt! Das Fehlen eines Rollstuhl-WCs erschwert oder verunmöglicht die Nutzung der Toilettenanlagen für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/ihavetopee.gif"
     },
     regal6: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Genau richtig! Zu hohe Regale können das Erreichen von Gegenständen für Rollstuhl-Nutzende erschweren oder verunmöglichen.",
         imageUrl: "img/gif/alomstthere.gif"
     },
     notausgang: {
