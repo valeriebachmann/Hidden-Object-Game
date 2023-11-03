@@ -141,6 +141,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 #popUpImg {
@@ -181,22 +182,19 @@ body {
 
 #popUpHelp {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    width: var(--popup-width);
     max-width: var(--popup-max-width);
-    overflow: auto;
     background-color: #fff;
     border-radius: 10px;
-    padding: 30px;
+    padding: 40px;
     z-index: 1;
-}
-
-#popUpHelp img {
-    height: 200px;
 }
 
 #mapButton {
@@ -254,6 +252,10 @@ body {
     display: flex;
     justify-content: center;
     z-index: -1;
+}
+
+.backgroundWrapper img {
+    height: 100%;
 }
 
 .contentWrapper {

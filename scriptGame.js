@@ -34,7 +34,7 @@ function showTryAgainPopUp() {
 }
 
 function showHelpPopup() {
-    popUpHelp.style.display = "grid";
+    popUpHelp.style.display = "flex";
 }
 
 if (isAlreadyOnboardedInGame === "true") {
