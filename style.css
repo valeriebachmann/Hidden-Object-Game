@@ -4,6 +4,7 @@
 body {
     font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* Zeilenhöhe verbessert die Lesbarkeit */
+    line-height: 1.5;
 }
 
 /* Überschriften */
@@ -40,6 +41,92 @@ h6 {
 a {
     text-decoration: none;
 }
+
+/* Styleklassen für die Buttons und Pop-Ups */
+/* TODO: Styleklassen im HTLM Code anpassen */
+.orange-button-style{
+    border-radius: 9px;
+    background: linear-gradient(121deg, #EE9539 -102.12%, #F64C18 137.05%);
+    box-shadow: 0px 2px 0px 2px #F64C18;
+}
+
+.blue-button-style{
+    border-radius: 9px;
+    background: linear-gradient(121deg, #60EFFF -102.12%, #0061FF 137.05%);
+    box-shadow: 0px 2px 0px 2px #0366FF;
+}
+
+.gray-button-style {
+    border-radius: 9px;
+    background: linear-gradient(98deg, #E3E3E3 1.03%, #CAD0FF 228.78%);
+    box-shadow: 0px 2px 0px 2px #E3E3E3;
+}
+
+.green-button-success-message {
+    border-radius: 9px;
+    background: linear-gradient(98deg, #00FF87 11.9%, #60EFFF 166.84%);
+    box-shadow: 0px 2px 0px 2px #00FF87;
+}
+
+.white-content-or-textfield-pop-up-style {
+    border-radius: 9px;
+    border: 1px solid #B8B8B8;
+    background: #F7F7F7;
+    box-shadow: 0px 2px 0px 2px #B8B8B8;
+}
+
+.textfield-correct-input {
+    border: 1px solid #00FF87;
+    box-shadow: 0px 2px 0px 2px #00FF87;
+}
+
+.whitegray-window-pop-up-ingame-style {
+    border-radius: 9px;
+    background: linear-gradient(162deg, #FFF 25.28%, #AFAFAF 207.51%);
+    box-shadow: 0px 2px 0px 2px #B8B8B8;
+}
+
+.button-large-in-popup-layout {
+    display: flex;
+    width: 345px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-small-in-popup-layout {
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-halfsize-in-popup-game {
+    display: flex;
+    width: 170px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-font {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.25em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.gradient-purple {
+    border-radius: 9px;
+    background: linear-gradient(170deg, rgba(181, 151, 246, 0.70) 0.52%, rgba(150, 198, 234, 0.70) 117.48%), #FFF;
+    box-shadow: 0px 2px 0px 2px #B597F6;
+}
+
 
 /* Weitere Textklassen */
 .small-text {
