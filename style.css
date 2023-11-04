@@ -263,15 +263,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     position: relative;
     isolation: isolate;
     padding: var(--spacing);
 }
 
 .contentWrapper h1 {
+    font-size: min(10vw, 80px);
     color: #fff;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 #indexButton {
