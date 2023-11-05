@@ -11,20 +11,33 @@
 </head>
 
 <body>
-    <div class="contentWrapper">
-        <h1>Discover Diversity</h1>
+    <div class="contentWrapper vignette">
+        <h1 id="gameTitle">Discover Diversity</h1>
+        <div id="infoGebaeude">sjdflkjds lskjdflk lskjdlkfjsl kjsdlkvjlkfsjdlkj sll</div>
         <div class="buttonWrapper" id="indexButton">
-            <button class="duolingo-button" type="button" onclick="showPopup()">Über das Spiel</button>
-            <button class="duolingo-button" type="button" onclick="">Diversity-Lexikon</button>
-            <button class="duolingo-button" type="button" onclick="">Einstellungen & Barrierefreiheit</button>
+            <div id="startGameButtonText">
+                <span>Suche dir deinen Weg durch die Welt der Diversität!</span>
+                <button class="duolingo-button" id="startGameButton" type="button" onclick="animateHomeScreen()">
+                    Spiel starten
+                </button>
+            </div>
+            <div id="homeScreenBlueButtonGroup" class="buttonWrapper">
+                <button class="duolingo-button" type="button" onclick="showPopup()">Über das Spiel</button>
+                <button class="duolingo-button" type="button" onclick="">Was ist Diversity</button>
+                <button class="duolingo-button" type="button" onclick="">Feedback geben</button>
+                <button class="duolingo-button" type="button" onclick="">Einstellungen & Barrierefreiheit</button>
+            </div>
         </div>
         <div class="backgroundWrapper">
-            <img src="img/index1.png" usemap="#imageMap">
-            <map name="imageMap">
-                <!-- coords: Koordinaten für die klickbaren Objekte -->
-                <area alt="building1" title="building1" href="game.html"
-                    coords="1695,597 1525,684 1522,803 1682,873 1856,796 1849,671 " shape="polygon">
-            </map>
+            <div id="imageWrapper">
+                <img id="image2" src="img/index2.png" usemap="#imageMap">
+                <img id="image1" src="img/index1.png">
+                <map name="imageMap">
+                    <!-- coords: Koordinaten für die klickbaren Objekte -->
+                    <area alt="building1" title="building1" href="game.html"
+                        coords="1695,597 1525,684 1522,803 1682,873 1856,796 1849,671 " shape="polygon">
+                </map>
+            </div>
         </div>
     </div>
     <div id="popUpStartExplanation">
