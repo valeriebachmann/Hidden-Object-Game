@@ -11,18 +11,19 @@
 </head>
 
 <body>
-    <div class="contentWrapper vignette">
+    <div class="contentWrapper">
+        <div class="vignette"></div>
         <h1 id="gameTitle">Discover Diversity</h1>
-        <div id="infoGebaeude">sjdflkjds lskjdflk lskjdlkfjsl kjsdlkvjlkfsjdlkj sll</div>
+        <div id="infoGebaeude">Die Level des Verstehens, erkunde die Diversität</div>
         <div class="buttonWrapper" id="indexButton">
             <div id="startGameButtonText">
                 <span>Suche dir deinen Weg durch die Welt der Diversität!</span>
                 <button class="duolingo-button" id="startGameButton" type="button" onclick="animateHomeScreen()">
-                    Spiel starten
+                    starten
                 </button>
             </div>
             <div id="homeScreenBlueButtonGroup" class="buttonWrapper">
-                <button class="duolingo-button" type="button" onclick="showPopup()">Über das Spiel</button>
+                <button class="duolingo-button" type="button" onclick="showPopupAboutGame()">Über das Spiel</button>
                 <button class="duolingo-button" type="button" onclick="">Was ist Diversity</button>
                 <button class="duolingo-button" type="button" onclick="">Feedback geben</button>
                 <button class="duolingo-button" type="button" onclick="">Einstellungen & Barrierefreiheit</button>
@@ -30,19 +31,22 @@
         </div>
         <div class="backgroundWrapper">
             <div id="imageWrapper">
-                <img id="image2" src="img/index2.png" usemap="#imageMap">
-                <img id="image1" src="img/index1.png">
+                <img id="image2" src="img/finalIndex2.png" usemap="#imageMap">
+                <img id="image1" src="img/finalIndex1.png">
                 <map name="imageMap">
                     <!-- coords: Koordinaten für die klickbaren Objekte -->
-                    <area alt="building1" title="building1" href="game.html"
-                        coords="1695,597 1525,684 1522,803 1682,873 1856,796 1849,671 " shape="polygon">
+                    <area alt="building1" title="building1"
+                        coords="2387,905 2145,1002 2124,1194 2387,1330 2666,1219 2661,1199 2534,1098 2529,1057 2499,1037 2499,961"
+                        shape="polygon" onclick="showPopUpLevel()">
                 </map>
             </div>
         </div>
     </div>
-    <div id="popUpStartExplanation">
-        <p>Tippe auf ein Gebäude, um zu starten</p>
-        <button class="duolingo-button" type="button" onclick="hidePopup()">Verstanden</button>
+    <div id="popUpLevel">
+        <p>mobile Einschränkung & Inklusion</p>
+        <a class="duolingo-button" href="game.html">1. Barrieren erkennen</a>
+        <a class="duolingo-button" href="#">2. Zugänglichkeit schaffen</a>
+        <a class="duolingo-button" href="#">3. Inklusive Gemeinschaft</a>
     </div>
     <div id="popUpAboutGame" class="hidden">
         <div id="popUpAboutGameContent">
@@ -59,7 +63,9 @@
             </div>
             <div id="popUpAboutGameContentText">
                 <p>Hey! Schön, bist du hier :) </p>
-                <p>Dieses Spiel wurde als Teil eines Studienprojekts an der HSLU erstellt. Im Rahmen eines 5-wöchigen Moduls zum Thema Diversity hatten wir die Aufgabe, ein interaktives Erlebnis zu schaffen, das sowohl unterhaltsam als auch informativ ist.</p>
+                <p>Dieses Spiel wurde als Teil eines Studienprojekts an der HSLU erstellt. Im Rahmen eines 5-wöchigen
+                    Moduls zum Thema Diversity hatten wir die Aufgabe, ein interaktives Erlebnis zu schaffen, das sowohl
+                    unterhaltsam als auch informativ ist.</p>
             </div>
             <div id="popUpAboutGameContentText">
                 <h4>Unser Team</h4>
@@ -69,14 +75,24 @@
             </div>
             <div id="popUpAboutGameContentText">
                 <h4>Dankeschön</h4>
-                <p>Wir danken der HSLU und unseren Dozent*innen Prof. Dr. Ladan Pooyan-Weihs und Stefan Fraefel für die Unterstützung und das Feedback während des gesamten Projekts. Und natürlich danken wir Dir, dass Du unser Spiel testest!</p>
+                <p>Wir danken der HSLU und unseren Dozent*innen Prof. Dr. Ladan Pooyan-Weihs und Stefan Fraefel für die
+                    Unterstützung und das Feedback während des gesamten Projekts. Und natürlich danken wir Dir, dass Du
+                    unser Spiel testest!</p>
             </div>
             <div id="popUpAboutGameContentText">
                 <h4>Barrierefreiheit</h4>
                 <p>Uns ist es wichtig, dass jeder die Möglichkeit hat, unser Spiel uneingeschränkt zu geniessen.
-                    Daher haben wir den internationalen Standard <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 (Web Content Accessibility Guideline)</a> und den schweizerischen <a href="https://www.ech.ch/de/uebersicht-nach-ech-nummer?combine=CH-0059&field_dosvers_kategorie_target_id=All&field_dosvers_status_target_id=372&field_dos_themenbereich_target_id=All&field_dos_fachgruppe_target_id=All">CH-0059 Accessibility Standard</a> berücksichtigt, um das Spielerlebnis so barrierefrei wie möglich zu gestalten.
-                    Zusätzlich verwenden wir die <a href="https://brailleinstitute.org/freefont">Atkinson Hyperlegible-Schriftart</a>, welche in Zusammenarbeit mit dem Braille-Institut und Applied Design Works entwickelt wurde. Diese Schriftart wurde speziell entworfen, um die Lesbarkeit und Verständlichkeit für alle, einschliesslich Personen mit Sehbeeinträchtigungen, zu verbessern.
-                    Das Braille-Institut of America ist eine gemeinnützige Organisation, die sich für die Rechte und Interessen von Menschen mit Sehbeeinträchtigungen einsetzt.</p>
+                    Daher haben wir den internationalen Standard <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 (Web
+                        Content Accessibility Guideline)</a> und den schweizerischen <a
+                        href="https://www.ech.ch/de/uebersicht-nach-ech-nummer?combine=CH-0059&field_dosvers_kategorie_target_id=All&field_dosvers_status_target_id=372&field_dos_themenbereich_target_id=All&field_dos_fachgruppe_target_id=All">CH-0059
+                        Accessibility Standard</a> berücksichtigt, um das Spielerlebnis so barrierefrei wie möglich zu
+                    gestalten.
+                    Zusätzlich verwenden wir die <a href="https://brailleinstitute.org/freefont">Atkinson
+                        Hyperlegible-Schriftart</a>, welche in Zusammenarbeit mit dem Braille-Institut und Applied
+                    Design Works entwickelt wurde. Diese Schriftart wurde speziell entworfen, um die Lesbarkeit und
+                    Verständlichkeit für alle, einschliesslich Personen mit Sehbeeinträchtigungen, zu verbessern.
+                    Das Braille-Institut of America ist eine gemeinnützige Organisation, die sich für die Rechte und
+                    Interessen von Menschen mit Sehbeeinträchtigungen einsetzt.</p>
             </div>
             <div id="popUpAboutGameContentText">
                 <h4>Mehr zu Diversity</h4>
@@ -90,15 +106,19 @@
             <div id="popUpAboutGameContentText">
                 <h4>Feedback</h4>
                 <!-- <a href="mailto:info@example.com">Feedback geben</a> -->
-                <p>Deine Meinung ist uns wichtig! Wenn du Anregungen oder Feedback zum Spiel hast, lass es uns wissen.</p>
+                <p>Deine Meinung ist uns wichtig! Wenn du Anregungen oder Feedback zum Spiel hast, lass es uns wissen.
+                </p>
                 <div class="indexAboutGameButton">
                     <button class="duolingo-button" type="button">Feedback geben</button>
                 </div>
             </div>
             <h4>Wichtige Anlaufstellen der HSLU</h4>
-            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/ueber-uns/portraet/diversity/">Diversity-Beauftragte der Departements</a>
-            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/schutz-vor-sexueller-belaestigung/">Vertrauenspersonen bei sexueller Belästigung</a>
-            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/barrierefrei-studieren/">Kontaktstelle «barrierefrei»</a>
+            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/ueber-uns/portraet/diversity/">Diversity-Beauftragte
+                der Departements</a>
+            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/schutz-vor-sexueller-belaestigung/">Vertrauenspersonen
+                bei sexueller Belästigung</a>
+            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/barrierefrei-studieren/">Kontaktstelle
+                «barrierefrei»</a>
             <a href="https://www.pblu.ch">Psychologische Beratung</a>
             <a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/">Übersicht zu den Beratungsstellen</a>
         </div>

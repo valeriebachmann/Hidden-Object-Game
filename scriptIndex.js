@@ -1,26 +1,24 @@
-const popUpStartExplanation = document.getElementById("popUpStartExplanation");
 const popUpAboutGame = document.getElementById("popUpAboutGame");
-const isAlreadyOnboardedInIndex = localStorage.getItem("isAlreadyOnboardedInIndex");
-
-if (isAlreadyOnboardedInIndex === "true") {
-    popUpStartExplanation.style.display = "none";
-}
+const popUpLevel = document.getElementById("popUpLevel");
 
 function hidePopup() {
-    popUpStartExplanation.style.display = "none";
     popUpAboutGame.style.display = "none";
-    localStorage.setItem("isAlreadyOnboardedInIndex", "true")
 }
 
-function showPopup() {
+function showPopupAboutGame() {
     popUpAboutGame.style.display = "grid";
+}
+
+function showPopUpLevel() {
+    popUpLevel.style.display = "flex";
+    console.log("test");
 }
 function test() {
     console.log("test");
 }
 
 function animateHomeScreen() {
-    const animationConfig = { duration: 300, fill: "forwards" }
+    const animationConfig = { duration: 500, fill: "forwards" }
     const gameTitle = document.getElementById("gameTitle");
     const blueButtonGroup = document.getElementById("homeScreenBlueButtonGroup");
     const startGameButtonText = document.getElementById("startGameButtonText");

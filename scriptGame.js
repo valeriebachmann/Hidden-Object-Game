@@ -110,7 +110,7 @@ const popUps = {
     lichtschalter: {
         title: "Genau! Das ist Ableismus",
         textContent: "Richtig erkannt! Zu hoch platzierte Schalter sind eine Barriere für Rollstuhl-Nutzende.",
-        imageUrl: "img/gif/shelf6.gif"
+        imageUrl: "img/gif/reach.gif"
     },
     regal2: {
         title: "Genau! Das ist Ableismus",
@@ -154,7 +154,7 @@ const popUps = {
     },
     whiteboard2: {
         title: "Genau! Das ist Ableismus",
-        textContent: "ut beobachtet! Zu hoch platzierte Whiteboards erschweren oder verunmöglichen die Nutzung für Rollstuhl-Nutzende.",
+        textContent: "Gut beobachtet! Zu hoch platzierte Whiteboards erschweren oder verunmöglichen die Nutzung für Rollstuhl-Nutzende.",
         imageUrl: "img/gif/microphone.gif"
     },
     //gameMensa.html
@@ -195,7 +195,7 @@ const popUps = {
     },
     notausgang: {
         title: "Genau! Das ist Ableismus",
-        textContent: "Schmale oder schwere Türen erschweren oder verunmöglichen das Durchkommen für Rollstuhl-Nutzende.",
+        textContent: "Der Notausgang ist nicht barrierefrei. Menschen mit einer mobilen Einschränkung wird die Evakuierung erschwert oder verunmöglicht.",
         imageUrl: "img/gif/stairfire.gif"
     },
 }
