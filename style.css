@@ -223,7 +223,6 @@ body {
     font-weight: bold;
 }
 
-
 #moreInfoButton::after {
     background-color: #1582b5;
 }
@@ -231,10 +230,6 @@ body {
 #startGameButton::after {
     background-color: #F27127;
 }
-
-
-
-
 
 /*  Pop Up, wenn auf ein klickbares Objekt geklickt wird */
 #popUp {
