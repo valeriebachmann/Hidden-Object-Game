@@ -13,19 +13,19 @@
 <body>
     <div class="contentWrapper">
         <!-- <div class="vignette"></div> -->
-        <h1 id="gameTitle">Discover Diversity</h1>
-        <div id="infoGebaeude">Die Level des Verstehens, erkunde die Diversität</div>
+        <h1 class="game-titel" id="gameTitle">Discover Diversity</h1>
+        <div id="infoGebaeude" class="white-content-or-textfield-pop-up-style">Die Level des Verstehens, erkunde die Diversität</div>
         <div class="buttonWrapper" id="indexButton">
-            <div id="startGameButtonText">
+            <div class="whitegray-window-pop-up-ingame-style" id="startGameButtonText">
                 <span>Suche dir deinen Weg durch die Welt der Diversität!</span>
-                <button class="duolingo-button" id="startGameButton" type="button" onclick="animateHomeScreen()">
-                    starten
+                <button class="duolingo-button orange-button-style button-font" id="startGameButton" type="button" onclick="animateHomeScreen()">
+                    Starten
                 </button>
             </div>
             <div id="homeScreenBlueButtonGroup" class="buttonWrapper">
-                <button class="duolingo-button" type="button" onclick="showPopupAboutGame()">Über das Spiel</button>
-                <button class="duolingo-button" type="button" onclick="">Was ist Diversity</button>
-                <button class="duolingo-button" type="button" onclick="">Einstellungen & Barrierefreiheit</button>
+                <button class="duolingo-button blue-button-style button-font" type="button" onclick="showPopupAboutGame()">Über das Spiel</button>
+                <button class="duolingo-button blue-button-style button-font" type="button" onclick="">Was ist Diversity</button>
+                <button class="duolingo-button blue-button-style button-font" type="button" onclick="">Einstellungen & Barrierefreiheit</button>
             </div>
         </div>
         <div class="backgroundWrapper">
@@ -41,11 +41,11 @@
             </div>
         </div>
     </div>
-    <div id="popUpLevel">
-        <p>mobile Einschränkung & Inklusion</p>
-        <a class="duolingo-button" href="game.html">1. Barrieren erkennen</a>
-        <a class="duolingo-button" href="#">2. Zugänglichkeit schaffen</a>
-        <a class="duolingo-button" href="#">3. Inklusive Gemeinschaft</a>
+    <div id="popUpLevel" class="whitegray-window-pop-up-ingame-style">
+        <p>Mobile Einschränkung & Inklusion</p>
+        <a class="duolingo-button blue-button-style" href="game.html">1. Barrieren erkennen</a>
+        <a class="duolingo-button blue-button-style" href="#">2. Zugänglichkeit schaffen</a>
+        <a class="duolingo-button blue-button-style" href="#">3. Inklusive Gemeinschaft</a>
     </div>
     <div id="popUpAboutGame" class="hidden">
         <div id="popUpAboutGameContent">
@@ -99,7 +99,7 @@
                     Einzigartigkeit von Menschen in allen Lebensbereichen zum Ziel hat.
                     Erfahre mehr über Diversity und besuche unser Diversity-Lexikon.</p>
                 <div class="indexAboutGameButton">
-                    <button class="duolingo-button" type="button">Zum Lexikon</button>
+                    <button class="duolingo-button blue-button-style" type="button">Zum Lexikon</button>
                 </div>
             </div>
             <div id="popUpAboutGameContentText">
@@ -108,18 +108,17 @@
                 <p>Deine Meinung ist uns wichtig! Wenn du Anregungen oder Feedback zum Spiel hast, lass es uns wissen.
                 </p>
                 <div class="indexAboutGameButton">
-                    <button class="duolingo-button" type="button">Feedback geben</button>
+                    <button class="duolingo-button button-small-in-popup-layout blue-button-style" type="button">Feedback geben</button>
                 </div>
             </div>
             <h4>Wichtige Anlaufstellen der HSLU</h4>
-            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/ueber-uns/portraet/diversity/">Diversity-Beauftragte
-                der Departements</a>
-            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/schutz-vor-sexueller-belaestigung/">Vertrauenspersonen
-                bei sexueller Belästigung</a>
-            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/barrierefrei-studieren/">Kontaktstelle
-                «barrierefrei»</a>
-            <a href="https://www.pblu.ch">Psychologische Beratung</a>
-            <a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/">Übersicht zu den Beratungsstellen</a>
+            <ul>
+                <li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/ueber-uns/portraet/diversity/">Diversity-Beauftragte der Departements</a></li>
+                <li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/schutz-vor-sexueller-belaestigung/">Vertrauenspersonen bei sexueller Belästigung</a></li>
+                <li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/barrierefrei-studieren/">Kontaktstelle «barrierefrei»</a></li>
+                <li><a href="https://www.pblu.ch">Psychologische Beratung</a></li>
+                <li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/campus/beratung/">Übersicht zu den Beratungsstellen</a></li>
+            </ul>
         </div>
     </div>
     <script src="scriptIndex.js" defer></script>
