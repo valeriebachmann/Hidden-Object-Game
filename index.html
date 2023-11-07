@@ -18,7 +18,7 @@
         <div class="buttonWrapper" id="indexButton">
             <div class="whitegray-window-pop-up-ingame-style" id="startGameButtonText">
                 <span>Suche dir deinen Weg durch die Welt der Diversität!</span>
-                <button class="duolingo-button orange-button-style button-font" id="startGameButton" type="button" onclick="animateHomeScreen()">
+                <button class="startGameButton duolingo-button orange-button-style button-font" type="button" onclick="animateHomeScreen()">
                     Starten
                 </button>
             </div>
@@ -48,10 +48,10 @@
         <a class="duolingo-button blue-button-style" href="#">3. Inklusive Gemeinschaft</a>
     </div>
     <div id="popUpAboutGame" class="hidden">
-        <div id="popUpAboutGameContent">
-            <div id="popUpHeader">
+        <div class="popUpAboutGameContent">
+            <div class="popUpHeader">
                 <h1>Über das Spiel</h1>
-                <button id="popUpCloseButton" type="button" onclick="hidePopup()">
+                <button class="popUpCloseButton" type="button" onclick="hidePopup()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-x">
@@ -60,25 +60,25 @@
                     </svg>
                 </button>
             </div>
-            <div id="popUpAboutGameContentText">
+            <div class="popUpAboutGameContentText">
                 <p>Hey! Schön, bist du hier :) </p>
                 <p>Dieses Spiel wurde als Teil eines Studienprojekts an der HSLU erstellt. Im Rahmen eines 5-wöchigen
                     Moduls zum Thema Diversity hatten wir die Aufgabe, ein interaktives Erlebnis zu schaffen, das sowohl
                     unterhaltsam als auch informativ ist.</p>
             </div>
-            <div id="popUpAboutGameContentText">
+            <div class="popUpAboutGameContentText">
                 <h4>Unser Team</h4>
                 <p><b>Valerie Bachmann</b> - Programmierung</p>
                 <p><b>Sophit Oeschger</b> - Grafik & Illustration</p>
                 <p><b>Kevin Vettiger</b> - UX/UI Design, Texte</p>
             </div>
-            <div id="popUpAboutGameContentText">
+            <div class="popUpAboutGameContentText">
                 <h4>Dankeschön</h4>
                 <p>Wir danken der HSLU und unseren Dozent*innen Prof. Dr. Ladan Pooyan-Weihs und Stefan Fraefel für die
                     Unterstützung und das Feedback während des gesamten Projekts. Und natürlich danken wir Dir, dass Du
                     unser Spiel testest!</p>
             </div>
-            <div id="popUpAboutGameContentText">
+            <div class="popUpAboutGameContentText">
                 <h4>Barrierefreiheit</h4>
                 <p>Uns ist es wichtig, dass jeder die Möglichkeit hat, unser Spiel uneingeschränkt zu geniessen.
                     Daher haben wir den internationalen Standard <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1 (Web
@@ -93,7 +93,7 @@
                     Das Braille-Institut of America ist eine gemeinnützige Organisation, die sich für die Rechte und
                     Interessen von Menschen mit Sehbeeinträchtigungen einsetzt.</p>
             </div>
-            <div id="popUpAboutGameContentText">
+            <div class="popUpAboutGameContentText">
                 <h4>Mehr zu Diversity</h4>
                 <p>Diversity ist ein umfassendes Konzept, das die Anerkennung und Wertschätzung der Vielfalt und
                     Einzigartigkeit von Menschen in allen Lebensbereichen zum Ziel hat.
@@ -102,7 +102,7 @@
                     <button class="duolingo-button blue-button-style" type="button">Zum Lexikon</button>
                 </div>
             </div>
-            <div id="popUpAboutGameContentText">
+            <div class="popUpAboutGameContentText">
                 <h4>Feedback</h4>
                 <!-- <a href="mailto:info@example.com">Feedback geben</a> -->
                 <p>Deine Meinung ist uns wichtig! Wenn du Anregungen oder Feedback zum Spiel hast, lass es uns wissen.

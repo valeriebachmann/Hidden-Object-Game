@@ -201,7 +201,7 @@ body {
 }
 
 /* Pop Up, wenn das Game gestartet wird */
-#popUpGameInformation {
+.popUpGameInformation {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -210,17 +210,17 @@ body {
     max-width: var(--popup-max-width);
 }
 
-#popUpGameInformation>div {
+.popUpGameInformation>div {
     background-color: #fff;
     border-radius: 9px;
     padding: 40px;
 }
 
-#startGameButton {
+.startGameButton {
     position: relative;
 }
 
-#startGameButtonText {
+.startGameButtonText {
     font-weight: bold;
     margin: 0 -10px;
     background-color: white;
@@ -246,12 +246,12 @@ body {
     font-weight: bold;
 }
 
-#moreInfoButton::after {
+.moreInfoButton::after {
     background: linear-gradient(121deg, #60EFFF -102.12%, #0061FF 137.05%);
     box-shadow: none;
 }
 
-#startGameButton::after {
+.startGameButton::after {
     background: linear-gradient(121deg, #EE9539 -102.12%, #F64C18 137.05%);
     box-shadow: none;
 }
@@ -273,14 +273,14 @@ body {
     margin: 0 auto;
 }
 
-#popUpHeader {
+.popUpHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-#popUpImg {
+.popUpImg {
     height: auto;
     width: 100%;
     object-fit: contain;
@@ -288,7 +288,7 @@ body {
     margin: 15px 0px 30px 0px;
 }
 
-#popUpCloseButton {
+.popUpCloseButton {
     border: none;
     background: none;
     padding: 1.5rem;
@@ -296,7 +296,7 @@ body {
 }
 
 /* Close Button für popUps: X */
-#popUpCloseButton svg {
+.popUpCloseButton svg {
     width: 2rem;
     height: 2rem;
 }
@@ -499,11 +499,11 @@ body {
     z-index: 2;
 }
 
-#popUpAboutGameContent {
+.popUpAboutGameContent {
     padding: 20px;
 }
 
-#popUpAboutGameContentText {
+.popUpAboutGameContentText {
     padding-bottom: 1rem;
 }
 

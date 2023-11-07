@@ -25,7 +25,7 @@ function showPopup(popupId) {
     const { title, textContent, imageUrl } = popUps[popupId]
     document.getElementById("popUpTitle").textContent = title;
     document.getElementById("popUpText").textContent = textContent;
-    document.getElementById("popUpImg").setAttribute("src", imageUrl);
+    document.getElementsByClassName("popUpImg").setAttribute("src", imageUrl);
     popUp.style.display = "grid";
 }
 
