@@ -148,7 +148,7 @@ a {
 html,
 body {
     height: 100%;
-    background-color: #cdccda;
+    background-color: #9cac73;
 }
 
 /* -------------------------------------- game.html -------------------------------------- */
@@ -479,7 +479,6 @@ body {
 #popUpAboutGameContentText {
     padding-bottom: 1rem;
 }
-
 
 .duolingo-button {
     appearance: button;
