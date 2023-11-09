@@ -5,6 +5,7 @@ body {
     font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* Zeilenhöhe verbessert die Lesbarkeit */
     line-height: 1.5;
+    font-size: 16px;
 }
 
 /* Überschriften */
@@ -26,6 +27,7 @@ h3 {
 h4 {
     font-size: 1.25em;
     /* z.B. 20px bei einer Basisgrösse von 16px */
+    margin-bottom: -16px;
 }
 
 h5 {
@@ -35,37 +37,56 @@ h5 {
 
 h6 {
     font-size: 1em;
-    /* Gleiche Grösse wie der Haupttext, aber oft fett oder anders stilisiert */
+    font-weight: bold;
 }
 
+
+
 a {
-    text-decoration: none;
+    color: inherit;
+    /* Entfernt die blaue Textfarbe */
+    text-decoration: underline;
 }
 
 /* Styleklassen für die Buttons und Pop-Ups */
-/* TODO: Styleklassen im HTLM Code anpassen */
 .orange-button-style {
     border-radius: 9px;
     background: linear-gradient(121deg, #EE9539 -102.12%, #F64C18 137.05%);
-    box-shadow: 0px 2px 0px 2px #F64C18;
+    box-shadow: 0px 2px 0px 2px #F64C18 !important;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.orange-button-style::after {
+    background: linear-gradient(121deg, #EE9539 -102.12%, #F64C18 137.05%);
+    box-shadow: none;
 }
 
 .blue-button-style {
     border-radius: 9px;
     background: linear-gradient(121deg, #60EFFF -102.12%, #0061FF 137.05%);
-    box-shadow: 0px 2px 0px 2px #0366FF;
+    box-shadow: 0px 2px 0px 2px #0366FF !important;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.blue-button-style::after {
+    background: linear-gradient(121deg, #60EFFF -102.12%, #0061FF 137.05%);
+    box-shadow: none;
 }
 
 .gray-button-style {
     border-radius: 9px;
     background: linear-gradient(98deg, #E3E3E3 1.03%, #CAD0FF 228.78%);
     box-shadow: 0px 2px 0px 2px #E3E3E3;
+    color: #000;
 }
 
 .green-button-success-message {
     border-radius: 9px;
     background: linear-gradient(98deg, #00FF87 11.9%, #60EFFF 166.84%);
     box-shadow: 0px 2px 0px 2px #00FF87;
+    color: #FFF;
 }
 
 .white-content-or-textfield-pop-up-style {
@@ -113,18 +134,25 @@ a {
 }
 
 .button-font {
-    color: #FFF;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.125em;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    color: #fff;
 }
 
 .gradient-purple {
     border-radius: 9px;
     background: linear-gradient(170deg, rgba(181, 151, 246, 0.70) 0.52%, rgba(150, 198, 234, 0.70) 117.48%), #FFF;
     box-shadow: 0px 2px 0px 2px #B597F6;
+}
+
+.game-titel {
+    background: linear-gradient(121deg, #EE9539 -102.12%, #F64C18 137.05%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -165,15 +193,16 @@ body {
 #scoreText {
     color: rgb(34, 34, 34);
     background-color: rgb(255, 255, 255);
-    padding: 15px 16px;
-    border-radius: 16px;
+    padding: 13px 16px;
+    border-radius: 9px;
     position: fixed;
     top: var(--spacing);
     right: var(--spacing);
+    font-weight: bold;
 }
 
 /* Pop Up, wenn das Game gestartet wird */
-#popUpGameInformation {
+.popUpGameInformation {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -182,26 +211,21 @@ body {
     max-width: var(--popup-max-width);
 }
 
-#popUpGameInformation>div {
+.popUpGameInformation>div {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 9px;
     padding: 40px;
 }
 
-#moreInfoButton {
-    background-color: #12709b;
-}
-
-#startGameButton {
+.startGameButton {
     position: relative;
-    background-color: #ae511b;
 }
 
-#startGameButtonText {
+.startGameButtonText {
     font-weight: bold;
     margin: 0 -10px;
     background-color: white;
-    border-radius: 16px;
+    border-radius: 9px;
     color: black;
     padding: 10px;
     display: grid;
@@ -215,7 +239,7 @@ body {
     left: var(--spacing);
     right: var(--spacing);
     background-color: white;
-    border-radius: 10px;
+    border-radius: 9px;
     padding: 30px;
     opacity: 0;
     max-width: var(--popup-max-width);
@@ -223,13 +247,16 @@ body {
     font-weight: bold;
 }
 
-#moreInfoButton::after {
-    background-color: #1582b5;
+.moreInfoButton::after {
+    background: linear-gradient(121deg, #60EFFF -102.12%, #0061FF 137.05%);
+    box-shadow: none;
 }
 
-#startGameButton::after {
-    background-color: #F27127;
+.startGameButton::after {
+    background: linear-gradient(121deg, #EE9539 -102.12%, #F64C18 137.05%);
+    box-shadow: none;
 }
+
 
 /*  Pop Up, wenn auf ein klickbares Objekt geklickt wird */
 #popUp {
@@ -247,22 +274,22 @@ body {
     margin: 0 auto;
 }
 
-#popUpHeader {
+.popUpHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-#popUpImg {
+.popUpImg {
     height: auto;
     width: 100%;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 9px;
     margin: 15px 0px 30px 0px;
 }
 
-#popUpCloseButton {
+.popUpCloseButton {
     border: none;
     background: none;
     padding: 1.5rem;
@@ -270,7 +297,7 @@ body {
 }
 
 /* Close Button für popUps: X */
-#popUpCloseButton svg {
+.popUpCloseButton svg {
     width: 2rem;
     height: 2rem;
 }
@@ -302,7 +329,7 @@ body {
     width: var(--popup-width);
     max-width: var(--popup-max-width);
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 9px;
     padding: 40px;
     z-index: 1;
 }
@@ -311,6 +338,7 @@ body {
     position: fixed;
     left: var(--spacing);
     bottom: var(--spacing);
+    text-decoration: none !important;
 }
 
 #popUpFalseClick {
@@ -324,7 +352,7 @@ body {
     width: var(--popup-width);
     max-width: var(--popup-max-width);
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 9px;
     padding: 40px;
 }
 
@@ -337,19 +365,18 @@ body {
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 9px;
     text-align: center;
     gap: 10px;
     width: var(--popup-width);
     max-width: var(--popup-max-width);
 }
 
-#getNextChallenge {
-    background-color: #ae511b;
-}
 
 #getNextChallenge::after {
-    background-color: #F27127;
+    background: linear-gradient(121deg, #EE9539 -102.12%, #F64C18 137.05%);
+    background: #0366FF;
+    box-shadow: none;
 }
 
 
@@ -432,7 +459,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 10px;
+    border-radius: 9px;
     width: var(--popup-width);
     max-width: var(--popup-max-width);
     z-index: 2;
@@ -462,7 +489,8 @@ body {
     right: 0;
     left: 0;
     top: 0;
-    background-color: #fff;
+    background: linear-gradient(170deg, rgba(181, 151, 246, 0.70) 0.52%, rgba(150, 198, 234, 0.70) 117.48%), #FFF;
+    box-shadow: 0px 2px 0px 2px #B597F6;
     color: black;
     padding: 1.5rem 2rem;
     overflow-y: auto;
@@ -472,22 +500,20 @@ body {
     z-index: 2;
 }
 
-#popUpAboutGameContent {
+.popUpAboutGameContent {
     padding: 20px;
 }
 
-#popUpAboutGameContentText {
+.popUpAboutGameContentText {
     padding-bottom: 1rem;
 }
 
 .duolingo-button {
     appearance: button;
-    background-color: #12709b;
     border: solid transparent;
-    border-radius: 16px;
+    border-radius: 9px;
     border-width: 0 0 4px;
     box-sizing: border-box;
-    color: #ffffff;
     cursor: pointer;
     display: inline-block;
     font-weight: 700;
@@ -506,9 +532,8 @@ body {
 
 .duolingo-button::after {
     background-clip: padding-box;
-    background-color: #1582b5;
     border: solid transparent;
-    border-radius: 16px;
+    border-radius: 9px;
     border-width: 0 0 4px;
     bottom: -4px;
     content: "";
@@ -517,6 +542,7 @@ body {
     right: 0;
     top: 0;
     z-index: -1;
+    box-shadow: none !important;
 }
 
 .duolingo-button:hover:not(:disabled) {
@@ -531,4 +557,5 @@ body {
 .duolingo-button:active {
     border-width: 4px 0 0;
     background: none;
+    box-shadow: none !important;
 }

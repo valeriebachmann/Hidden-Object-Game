@@ -1,5 +1,5 @@
 const popUp = document.getElementById("popUp");
-const popUpGameInformation = document.getElementById("popUpGameInformation");
+const popUpGameInformation = document.getElementsByClassName("popUpGameInformation")[0];
 const popUpHelp = document.getElementById("popUpHelp");
 const popUpEnd = document.getElementById("popUpEnd");
 const popUpFalseClick = document.getElementById("popUpFalseClick");
@@ -25,7 +25,7 @@ function showPopup(popupId) {
     const { title, textContent, imageUrl } = popUps[popupId]
     document.getElementById("popUpTitle").textContent = title;
     document.getElementById("popUpText").textContent = textContent;
-    document.getElementById("popUpImg").setAttribute("src", imageUrl);
+    document.getElementsByClassName("popUpImg")[0].setAttribute("src", imageUrl);
     popUp.style.display = "grid";
 }
 

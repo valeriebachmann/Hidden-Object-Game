@@ -12,12 +12,13 @@
 <body>
     <div class="horizontalSlider">
         <!-- <div class="vignette" style="z-index: 0;"></div> -->
-        <span id="scoreText">Gefundene Objekte: 0</span>
-        <button id="helpButton" class="duolingo-button" type="button" onclick="showHelpPopup()">Hilfe</button>
-        <div id="popUpHelp">
-            <div id="popUpHeader">
+        <span id="scoreText" class="white-content-or-textfield-pop-up-style">Gefundene Objekte: 0</span>
+        <button id="helpButton" class="duolingo-button blue-button-style" type="button"
+            onclick="showHelpPopup()">Hilfe</button>
+        <div id="popUpHelp" class="whitegray-window-pop-up-ingame-style">
+            <div class="popUpHeader">
                 <h1>Hilfe</h1>
-                <button id="popUpCloseButton" type="button" onclick="hidePopup()">
+                <button class="popUpCloseButton" type="button" onclick="hidePopup()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-x">
@@ -30,22 +31,25 @@
                 einen Unterschied!
             </p>
             <div class="buttonWrapper" style="margin-top: 50px;">
-                <button class="duolingo-button" type="button">Feedback geben</button>
-                <button class="duolingo-button" type="button">Einstellungen & Barrierefreiheit</button>
+                <button class="duolingo-button blue-button-style" type="button">Feedback geben</button>
+                <button class="duolingo-button blue-button-style" type="button">Einstellungen &
+                    Barrierefreiheit</button>
             </div>
         </div>
-        <a id="mapButton" class="duolingo-button" href="index.html">
-            zur Karte
+        <a id="mapButton" class="duolingo-button blue-button-style" href="index.html">
+            Zurück
         </a>
-        <div id="popUpGameInformation">
+        <div class="popUpGameInformation">
             <div>
                 <h2>Barrieren erkennen</h2>
                 <p>Suche 26 Dinge im Schulraum und in der Mensa, die nicht rollstuhlgerecht sind. <br> Lerne und mache
                     einen Unterschied!
                 </p>
                 <div class="buttonWrapper">
-                    <button class="duolingo-button" id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
-                    <button class="duolingo-button" id="startGameButton" type="button" onclick="hidePopup()">Spiel
+                    <button class="duolingo-button blue-button-style moreInfoButton" type="button" onclick="">Mehr
+                        erfahren</button>
+                    <button class="duolingo-button orange-button-style startGameButton" type="button"
+                        onclick="hidePopup()">Spiel
                         starten</button>
                 </div>
             </div>
@@ -101,39 +105,43 @@
                 shape="polygon">
         </map>
     </div>
-    <div id="popUp" class="hidden">
+    <div id="popUp" class="hidden whitegray-window-pop-up-ingame-style">
         <!-- <img id="popUpImage" /> -->
-        <div id="popUpHeader">
+        <div class="popUpHeader">
             <h3 id="popUpTitle">Title</h3>
         </div>
         <div id="popUpContent">
             <p id="popUpText">Text</p>
-            <img id="popUpImg" src="img/iHateDoors.gif">
+            <img class="popUpImg" src="img/gifExample.gif">
             <div class="buttonWrapper">
-                <button class="duolingo-button" id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
-                <button class="duolingo-button" id="startGameButton" type="button" onclick="hidePopup()">Weiter</button>
+                <button class="duolingo-button blue-button-style moreInfoButton" type="button" onclick="">Mehr
+                    erfahren</button>
+                <button class="duolingo-button orange-button-style startGameButton" type="button"
+                    onclick="hidePopup()">Weiter</button>
             </div>
         </div>
     </div>
-    <div id="popUpFalseClick">
+    <div id="popUpFalseClick" class="whitegray-window-pop-up-ingame-style">
         <div id="popUpFalseClickContent">
             <h1>Guter Versuch!</h1>
             <p>Suche nochmals oder lese durch die Hinweise</p>
-            <img id="popUpImg" src="img/gif/therewasanattempt.gif">
+            <img class="popUpImg" src="img/gif/therewasanattempt.gif">
             <div class="buttonWrapper">
-                <button class="duolingo-button" id="moreInfoButton" type="button" onclick="">Mehr erfahren</button>
-                <button class="duolingo-button" id="startGameButton" type="button" onclick="hidePopup()">Weiter</button>
+                <button class="duolingo-button blue-button-style moreInfoButton" type="button" onclick="">Mehr
+                    erfahren</button>
+                <button class="duolingo-button orange-button-style startGameButton" type="button"
+                    onclick="hidePopup()">Weiter</button>
             </div>
         </div>
     </div>
-    <div id="popUpEnd">
+    <div id="popUpEnd" class="whitegray-window-pop-up-ingame-style">
         <h1>Super! Rollt bei dir</h1>
-        <p>Du hast alle 10 gefunden!</p>
-        <a id="sendFeedbackButton" class="duolingo-button" href="mailto:info@example.com">
+        <p>Du hast alle 26 gefunden!</p>
+        <a id="sendFeedbackButton" class="duolingo-button blue-button-style" href="mailto:info@example.com">
             Feedback geben
         </a>
-        <a id="getNextChallenge" class="duolingo-button" href="index.html">
-            nächste Herausforderung
+        <a id="getNextChallenge" class="duolingo-button orange-button-style" href="index.html">
+            Nächste Herausforderung
         </a>
     </div>
     <script src="scriptGame.js" defer></script>
